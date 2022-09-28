@@ -13,7 +13,5 @@
 #
 ---
 include:
-  - board: bluemicro840_v1
-    shield: jiran_left
-  - board: bluemicro840_v1
-    shield: jiran_right
+  - board: jorian840_left
+  - board: jorian840_right
