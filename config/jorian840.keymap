@@ -22,7 +22,7 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |   ~  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  [   |    ] |
+// |  ESC |   ~  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  [   |  ]  |
 //        | LALT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 //        | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  _  | CTRL |
 //                           | SPC | LSH | LWR |   | RSE | RSH  | LANG |
@@ -37,27 +37,27 @@
 // -----------------------------------------------------------------------------------------
 // |     |  F1 |  F2 |  F3 |  F4 |  F5 |     |   |utyv |     |  F9 |     |     | F12 |Ctl- |
 //       |  // | Hom | PD  |  PU | End | Tab |   | ENT | LEFT| UP  |DOWN | RGHT| ALT |
-//       |  =  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+//       |Ctrl |CL Hm| CL+ | CL- |CLEnd| Del |   |Cl EN|Cl LF|Cl { |Cl } |Cl RT|Ctrl |
+//                        | MENU |     |     |   |PrnSn|BkSps|ClPau|
                         bindings = <
-   &none &kp F1           &kp F2   &kp F3    &kp F4    &kp F5  &none        &utyv     &none    &kp F9  &none    &none     &kp F11   &kp LC(MINUS)
-         &kp LC(KP_SLASH) &kp HOME &kp PG_DN &kp PG_UP &kp END &kp TAB      &kp ENTER &kp LEFT &kp UP  &kp DOWN &kp RIGHT &kp RALT
-          &mt LALT EQUAL &kp N1   &kp N2 &kp N3   &kp N4   &kp N5           &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &trans
-                                              &lt ADJ TAB &trans &trans   &trans &trans &lt ADJ DEL
+   &none &kp F1           &kp F2       &kp F3          &kp F4           &kp F5      &none        &none         &none        &kp F9       &none        &none         &kp F11   &kp LC(MINUS)
+         &kp LC(KP_SLASH) &kp HOME     &kp PG_DN       &kp PG_UP        &kp END     &kp TAB      &kp ENTER     &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT     &kp RALT
+         &kp LCTRL        &kp LC(HOME) &kp LC(KP_PLUS) &kp LC(KP_MINUS) &kp LC(END) &kp DEL      &kp LC(ENTER) &kp LC(LEFT) &kp LC(LBKT) &kp LC(RBKT) &kp LC(RIGHT) &kp RCTRL
+                                                       &kp K_MENU       &trans      &none        &kp PSCRN     &kp BSPC     &kp LC(PAUSE_BREAK)
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |     | NMLK |  /  |  7  |  8  |  9  |  -  |   | VOLU| HOME| PRSC| PGUP| SCLK| CLCK|     |
-//       | CTRL |  *  |  4  |  5  |  6  |  +  |   | MUT | LEFT|  UP | RGHT| INS | APP |
-//       |      |  0  |  1  |  2  |  3  |  .  |   | VOLD| END | DOWN| PGDN| PAUS|     |
-//                          |     |     | ADJ |   | ADJ |     |     |
+// |     |  $  |  [  |  ]  |  №  |  ;  |  %  |   |  :  |  ~  |  *  |  (  |  )  |  {  |  }  |
+//       |  /  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  '  |
+//       |  \  |  #  |  @  |  |  |  "  |  -  |   |  !  |  ?  |  <  |  >  |  &  |  ^  |
+//                       |   +   |  =  |  .  |   |     |     |   ,   |
                         bindings = <
-   &trans &kp KP_NUM      &kp KP_SLASH    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS        &kp C_VOL_UP &kp HOME &kp PSCRN &kp PG_UP &kp SLCK &kp CAPS &trans
-          &mt LCTRL EQUAL &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS         &kp C_MUTE   &kp LEFT &kp UP    &kp RIGHT &kp INS  &mt RCTRL K_APP
-          &trans          &kp KP_N0       &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT          &kp C_VOL_DN &kp END  &kp DOWN  &kp PG_DN &kp PAUSE_BREAK &trans
-                                                           &trans &trans &lt ADJ RET   &lt ADJ ESC &trans &trans
+   &none &none               &none  &none  &kp LS(N3) &kp LS(N4) &kp LS(N5)    &kp LS(N6) &kp LS(GRAVE) &kp LS(N8) &kp LS(N9) &kp LS(N0) &none &none
+         &kp LS(NON_US_BSLH) &kp N1 &kp N2 &kp N3     &kp N4     &kp N5        &kp N6     &kp N7        &kp N8     &kp N9     &kp N0     &none 
+         &kp NON_US_BSLH     &none  &none  &none      &kp LS(N2) &kp MINUS     &kp LS(N1) &kp LS(N7)    &none      &none      &none      &none
+                                        &kp LS(EQUAL) &kp EQUAL  &kp SLASH     &none      &trans        &kp LS(SLASH)
                         >;
                 };
                 adjust_layer {
