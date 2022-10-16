@@ -232,10 +232,10 @@
 //       |  \  |  #  |  @  |  |  |  "  |  -  |   |  !  |  ?  |  <  |  >  |  &  |  ^  |
 //                       |   +   |  =  |  .  |   |     |     |   ,   |
                         bindings = <
-   &none &macro_6            &macro_0 &macro_1  &kp LS(N3) &kp LS(N4) &kp LS(N5)    &kp LS(N6) &kp LS(GRAVE) &kp LS(N8) &kp LS(N9) &kp LS(N0) &macro_2 &macro_3
-         &kp LS(NON_US_BSLH) &kp N1   &kp N2 &kp N3     &kp N4     &kp N5        &kp N6     &kp N7        &kp N8     &kp N9     &kp N0     &macro_12 
-         &kp NON_US_BSLH     &macro_5 &macro_4 &macro_10 &kp LS(N2) &kp MINUS     &kp LS(N1) &kp LS(N7)   &macro_7   &macro_8   &macro_9   &macro_11
-                                          &kp LS(EQUAL) &kp EQUAL  &kp SLASH     &none      &trans        &kp LS(SLASH)
+   &none &macro_6            &macro_0 &macro_1 &kp LS(N3) &kp LS(N4) &kp LS(N5)    &kp LS(N6) &kp M13    &kp LS(N8) &kp LS(N9) &kp LS(N0) &macro_2 &macro_3
+         &kp LS(NON_US_BSLH) &kp N1   &kp N2   &kp N3     &kp N4     &kp N5        &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &macro_12 
+         &kp NON_US_BSLH     &macro_5 &macro_4 &macro_10  &kp LS(N2) &kp MINUS     &kp LS(N1) &kp LS(N7) &macro_7   &macro_8   &macro_9   &macro_11
+                                            &kp LS(EQUAL) &kp EQUAL  &kp SLASH     &none      &trans        &kp LS(SLASH)
                         >;
                 };
                 adjust_layer {
