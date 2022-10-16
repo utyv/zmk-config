@@ -33,7 +33,7 @@
             bindings
                 = <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
-                , <&macro_tap &kp RBKT>
+                , <&macro_tap &kp LS(RBKT)>
                 , <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
