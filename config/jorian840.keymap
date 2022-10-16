@@ -20,27 +20,13 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LALT &kp LSHFT>
-                //, <&macro_press >
                 , <&macro_release &kp LALT &kp LSHFT>
-                //, <&macro_release >
                 , <&macro_tap &kp LBKT>
                 , <&macro_press &kp LALT &kp LSHFT>
-                //, <&macro_press >
                 , <&macro_release &kp LALT &kp LSHFT>
-                //, <&macro_release >
                 ;
         };
     };
-
-    
-          
-            
-    
-
-          
-    
-    
-  
 };
 / {
         keymap {
