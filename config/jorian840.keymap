@@ -60,9 +60,7 @@
             bindings
                 = <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp RBKT>
-                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp LS(LBKT)>
                 , <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
@@ -70,24 +68,6 @@
     };
 };
 
-/// {
-//    macros {
-//        macro_3: macro_3 {
-//            label = "macro_3";
-//            compatible = "zmk,behavior-macro";
-//            #binding-cells = <3>;
-//            bindings
-//                = <&macro_press &kp LALT &kp LSHFT>
-//                , <&macro_release &kp LALT &kp LSHFT>
-//                , <&macro_press &kp LSHFT>
-//                , <&macro_tap &kp LBKT>
-//                , <&macro_release &kp LSHFT>
-//                , <&macro_press &kp LALT &kp LSHFT>
-//                , <&macro_release &kp LALT &kp LSHFT>
-//                ;
-//        };
-//    };
-//};
 
 / {
         keymap {
