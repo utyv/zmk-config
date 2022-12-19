@@ -19,22 +19,22 @@
         combo_undo {
             timeout-ms = <50>;
             key-positions = <13 14>;
-            bindings = <&kp LC(Z)>;
+            bindings = <&kp Z>;
         };
         combo_cut {
             timeout-ms = <50>;
             key-positions = <13 15>;
-            bindings = <&kp LC(X)>;
+            bindings = <&kp X>;
         };
         combo_copy {
             timeout-ms = <50>;
             key-positions = <13 16>;
-            bindings = <&kp LC(C)>;
+            bindings = <&kp C>;
         };
         combo_paste {
             timeout-ms = <50>;
             key-positions = <13 17>;
-            bindings = <&kp LC(V)>;
+            bindings = <&kp V>;
         };
     };
 };
