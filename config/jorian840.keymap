@@ -23,17 +23,17 @@
         };
         combo_cut {
             timeout-ms = <50>;
-            key-positions = <6 7>;
+            key-positions = <14 15>;
             bindings = <&kp X>;
         };
         combo_copy {
             timeout-ms = <50>;
-            key-positions = <7 8>;
+            key-positions = <15 16>;
             bindings = <&kp C>;
         };
         combo_paste {
             timeout-ms = <50>;
-            key-positions = <8 9>;
+            key-positions = <16 17>;
             bindings = <&kp V>;
         };
     };
