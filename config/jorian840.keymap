@@ -106,7 +106,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT &kp LSHFT>
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
                 , <&macro_tap &kp LS(COMMA)>
                 , <&macro_press &kp LALT &kp LSHFT>
@@ -118,7 +119,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT &kp LSHFT>
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
                 , <&macro_tap &kp LS(DOT)>
                 , <&macro_press &kp LALT &kp LSHFT>
