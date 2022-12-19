@@ -13,8 +13,6 @@
 #define RSE 2
 #define ADJ 3
 
-&lt { quick_tap_ms = <200>; };
-&mt { quick_tap_ms = <200>; };
 / {
     macros {
         macro_0: macro_0 {
@@ -106,8 +104,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 1>
-                , <&macro_press &kp LALT &kp LSHFT>
+                = <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
                 , <&macro_tap &kp LS(COMMA)>
                 , <&macro_press &kp LALT &kp LSHFT>
@@ -119,8 +116,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 1>
-                , <&macro_press &kp LALT &kp LSHFT>
+                = <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
                 , <&macro_tap &kp LS(DOT)>
                 , <&macro_press &kp LALT &kp LSHFT>
