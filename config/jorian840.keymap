@@ -126,7 +126,61 @@
             key-positions = <27 28>;
             bindings = <&kp P>;
         };
-      
+        combo_Y {
+            timeout-ms = <50>;
+            key-positions = <4 18>;
+            bindings = <&kp Q>;
+        };
+        combo_L {
+            timeout-ms = <50>;
+            key-positions = <3 18>;
+            bindings = <&kp K>;
+        };
+        combo_M {
+            timeout-ms = <50>;
+            key-positions = <2 18>;
+            bindings = <&kp V>;
+        };
+        combo_N {
+            timeout-ms = <50>;
+            key-positions = <17 5>;
+            bindings = <&kp Y>;
+        };
+        combo_R {
+            timeout-ms = <50>;
+            key-positions = <3 17>;
+            bindings = <&kp H>;
+        };
+        combo_H {
+            timeout-ms = <50>;
+            key-positions = <2 17>;
+            bindings = <&kp LBKT>;
+        };
+        combo_C {
+            timeout-ms = <50>;
+            key-positions = <16 5>;
+            bindings = <&kp W>;
+        };
+        combo_CH {
+            timeout-ms = <50>;
+            key-positions = <16 4>;
+            bindings = <&kp LBKT>;
+        };
+        combo_SCH {
+            timeout-ms = <50>;
+            key-positions = <2 16>;
+            bindings = <&kp LBKT>;
+        };
+        combo_TVZ {
+            timeout-ms = <50>;
+            key-positions = <15 5>;
+            bindings = <&kp LBRC>;
+        };
+        combo_MZ {
+            timeout-ms = <50>;
+            key-positions = <15 4>;
+            bindings = <&kp M>;
+        };
     };
 };
 
