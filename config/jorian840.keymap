@@ -21,6 +21,7 @@
             key-positions = <17 18>;
             bindings = <&kp F>;
         };
+    };
 };
 
 / {
