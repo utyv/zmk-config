@@ -127,7 +127,7 @@
             bindings = <&kp P>;
         };
         combo_Y {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <4 18>;
             bindings = <&kp Q>;
         };
