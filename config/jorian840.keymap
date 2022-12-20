@@ -30,28 +30,28 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |      |         |         |   7   |   8   |   9   |   0     |               |     |     |     |     |     |      |     |
-//        | LALT    |  .,     |   4   |   5   |   6   |   =+    |               |     |     |     |     |     |      |
-//        | LCTL    |         |   1   |   2   |   3   |   -_    |               |     |     |     |     |     |      |
-//                                            |       |LSHFT    | LWR   | |     |     |     |
+// |  ESC |         |         |   7   |   8   |    9    |   0     |               |     |     |     |     |     |      |     |
+//        | LALT    |  .,     |   4   |   5   |    6    |   =+    |               |     |     |     |     |     |      |
+//        | LCTL    |         |   1   |   2   |    3    |   -_    |               |     |     |     |     |     |      |
+//                                            |   SPC   |LSHFT    | LWR   | |     |     |     |
                         bindings = <
-   &none   &none     &none     &kp N7  &kp N8  &kp N9  &kp N0                    &none &none &none &none &none &none  &none
-           &kp LALT  &kp SLASH &kp N4  &kp N5  &kp N6  &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL &none     &kp N1  &kp N2  &kp N3  &kp MINUS                 &none &none &none &none &none &none
-                                               &none   &kp LSHFT &mo LWR   &none &none &none
+   &kp ESC &none     &none     &kp N7  &kp N8  &kp N9    &kp N0                    &none &none &none &none &none &none  &none
+           &kp LALT  &kp SLASH &kp N4  &kp N5  &kp N6    &kp EQUAL                 &none &none &none &none &none &none
+           &kp LCTRL &none     &kp N1  &kp N2  &kp N3    &kp MINUS                 &none &none &none &none &none &none
+                                               &kp SPACE &kp LSHFT &mo LWR   &none &none &none
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |      |         |         |       |       |       |         |               |     |     |     |     |     |      |     |
-//        | LALT    |         |       |       |       |  TAB    |               |     |     |     |     |     |      |
-//        | LCTL    | ctl-z   |       |       |       |         |               |     |     |     |     |     |      |
-//                                            |       |LSHFT    |       | |     |     |     |
+// |      |         |         |         |         |         |         |               |     |     |     |     |     |      |     |
+//        | LALT    |         |         |         |         |  TAB    |               |     |     |     |     |     |      |
+//        | LCTL    | ctl-z   | ctl-x   | ctl-c   | ctl-v   |         |               |     |     |     |     |     |      |
+//                                                |         |LSHFT    |       | |     |     |     |
                         bindings = <
-   &none   &none     &none     &none   &none   &none   &none                 &none &none &none &none &none &none  &none
-           &trans    &none     &none   &none   &none   &kp TAB               &none &none &none &none &none &none
-           &trans    &kp LC(Z) &none   &none   &none   &none                 &none &none &none &none &none &none
-                                               &none   &trans    &none     &none &none &none
+   &none   &none     &none     &none     &none     &none     &none                 &none &none &none &none &none &none  &none
+           &trans    &none     &none     &none     &none     &kp TAB               &none &none &none &none &none &none
+           &trans    &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &none                 &none &none &none &none &none &none
+                                                   &none     &trans    &none     &none &none &none
                          >;
                 };
 
