@@ -16,27 +16,11 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_undo {
+        combo_A {
             timeout-ms = <50>;
-            key-positions = <5 6>;
-            bindings = <&kp Z>;
+            key-positions = <17 18>;
+            bindings = <&kp F>;
         };
-        combo_cut {
-            timeout-ms = <50>;
-            key-positions = <14 15>;
-            bindings = <&kp X>;
-        };
-        combo_copy {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&kp C>;
-        };
-        combo_paste {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&kp V>;
-        };
-    };
 };
 
 / {
@@ -60,12 +44,12 @@
 // -----------------------------------------------------------------------------------------
 // |      |         |         |       |       |       |         |               |     |     |     |     |     |      |     |
 //        | LALT    |         |       |       |       |  TAB    |               |     |     |     |     |     |      |
-//        | LCTL    |         |       |       |       |         |               |     |     |     |     |     |      |
+//        | LCTL    | ctl-z   |       |       |       |         |               |     |     |     |     |     |      |
 //                                            |       |LSHFT    |       | |     |     |     |
                         bindings = <
    &none   &none     &none     &none   &none   &none   &none                 &none &none &none &none &none &none  &none
            &trans    &none     &none   &none   &none   &kp TAB               &none &none &none &none &none &none
-           &trans    &none     &none   &none   &none   &none                 &none &none &none &none &none &none
+           &trans    &kp LC(Z) &none   &none   &none   &none                 &none &none &none &none &none &none
                                                &none   &trans    &none     &none &none &none
                          >;
                 };
