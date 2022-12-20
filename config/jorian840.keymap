@@ -138,7 +138,7 @@
         };
         combo_M {
             timeout-ms = <50>;
-            key-positions = <29 18>;
+            key-positions = <2 18>;
             bindings = <&kp V>;
         };
         combo_N {
