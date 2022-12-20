@@ -86,6 +86,46 @@
             key-positions = <28 30>;
             bindings = <&kp D>;
         };
+        combo_K {
+            timeout-ms = <50>;
+            key-positions = <2 5>;
+            bindings = <&kp R>;
+        };
+        combo_G {
+            timeout-ms = <50>;
+            key-positions = <27 30>;
+            bindings = <&kp U>;
+        };
+        combo_T {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp N>;
+        };
+        combo_D {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp L>;
+        };
+        combo_SH {
+            timeout-ms = <50>;
+            key-positions = <2 4>;
+            bindings = <&kp I>;
+        };
+        combo_ZH {
+            timeout-ms = <50>;
+            key-positions = <27 29>;
+            bindings = <&kp SEMI>;
+        };
+        combo_S {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp C>;
+        };
+        combo_Z {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp P>;
+        };
       
     };
 };
