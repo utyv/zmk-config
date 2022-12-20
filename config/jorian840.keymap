@@ -66,6 +66,16 @@
             key-positions = <16 17 18>;
             bindings = <&kp GRAVE>;
         };
+        combo_P {
+            timeout-ms = <50>;
+            key-positions = <4 5>;
+            bindings = <&kp G>;
+        };
+        combo_B {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp COMMA>;
+        };
        
     };
 };
@@ -92,12 +102,12 @@
 // |      |         |         |            | ctl home   |            | ENTER   |               |     |     |     |     |     |      |     |
 //        | LALT    |         | ctl {      | ctl end    | ctl }      |  TAB    |               |     |     |     |     |     |      |
 //        | LCTL    | ctl-z   | ctl-x      | ctl-c      | ctl-v      |  DEL    |               |     |     |     |     |     |      |
-//                                                      |            |LSHFT    |       | |     |     |     |
+//                                                      | BKSPS      |LSHFT    |       | |     |     |     |
                         bindings = <
    &none   &none     &none     &none        &kp LC(HOME) &none        &kp ENTER             &none &none &none &none &none &none  &none
            &trans    &none     &kp LC(LBKT) &kp LC(END)  &kp LC(RBKT) &kp TAB               &none &none &none &none &none &none
            &trans    &kp LC(Z) &kp LC(X)    &kp LC(C)    &kp LC(V)    &kp DEL               &none &none &none &none &none &none
-                                                         &none        &trans    &none     &none &none &none
+                                                         &kp BSPC     &trans    &none     &none &none &none
                          >;
                 };
 
