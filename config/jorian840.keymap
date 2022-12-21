@@ -28,6 +28,32 @@
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
         };
+        macro_LT: macro_LT {
+            label = "macro_LT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &kp LS(COMMA)>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        };
+        macro_GT: macro_GT {
+            label = "macro_GT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &kp LS(DOT)>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        };
     };
 };
 
@@ -198,6 +224,16 @@
             timeout-ms = <50>;
             key-positions = <15 4>;
             bindings = <&kp M>;
+        };
+        combo_LT {
+            timeout-ms = <50>;
+            key-positions = <2 15>;
+            bindings = <&macro_LT>;
+        };
+        combo_GT {
+            timeout-ms = <50>;
+            key-positions = <3 16>;
+            bindings = <&macro_GT>;
         };
     };
 };
