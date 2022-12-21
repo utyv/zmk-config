@@ -93,6 +93,58 @@
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
         };
+        macro_AT: macro_AT {
+            label = "macro_AT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &kp LS(N2)>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        };
+        macro_HASH: macro_HASH {
+            label = "macro_HASH";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &kp LS(N3)>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        };
+        macro_DOLLAR: macro_DOLLAR {
+            label = "macro_DOLLAR";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &kp LS(N4)>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        };
+        macro_CARET: macro_CARET {
+            label = "macro_CARET";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &kp LS(N6)>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        };
     };
 };
 
@@ -288,6 +340,26 @@
             timeout-ms = <50>;
             key-positions = <4 17>;
             bindings = <&macro_AMPS>;
+        };
+        combo_AT {
+            timeout-ms = <50>;
+            key-positions = <17 29>;
+            bindings = <&macro_AT>;
+        };
+        combo_HASH {
+            timeout-ms = <50>;
+            key-positions = <18 30>;
+            bindings = <&macro_HASH>;
+        };
+        combo_DOLLAR {
+            timeout-ms = <50>;
+            key-positions = <16 28>;
+            bindings = <&macro_DOLLAR>;
+        };
+        combo_CARET {
+            timeout-ms = <50>;
+            key-positions = <15 27>;
+            bindings = <&macro_CARET>;
         };
     };
 };
