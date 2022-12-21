@@ -28,6 +28,7 @@
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
         };
+    };
 };
 
 / {
