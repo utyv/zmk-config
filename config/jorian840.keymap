@@ -54,6 +54,45 @@
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
         };
+        macro_LBKT: macro_LBKT {
+            label = "macro_LBKT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &kp LBKT>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        };
+        macro_RBKT: macro_RBKT {
+            label = "macro_RBKT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &kp RBKT>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        };
+        macro_AMPS: macro_AMPS {
+            label = "macro_AMPS";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &kp LS(N7)>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        };
     };
 };
 
@@ -235,6 +274,21 @@
             key-positions = <3 16>;
             bindings = <&macro_GT>;
         };
+        combo_LBKT {
+            timeout-ms = <50>;
+            key-positions = <5 18>;
+            bindings = <&macro_LBKT>;
+        };
+        combo_RBKT {
+            timeout-ms = <50>;
+            key-positions = <6 19>;
+            bindings = <&macro_RBKT>;
+        };
+        combo_AMPS {
+            timeout-ms = <50>;
+            key-positions = <4 17>;
+            bindings = <&macro_AMPS>;
+        };
     };
 };
 
@@ -258,12 +312,12 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |      |         |         | <-         | ctl home   | ->         | ENTER   |               |     |     |     |     |     |      |     |
-//        | LALT    |         | ctl {      | ctl end    | ctl }      |  TAB    |               |     |     |     |     |     |      |
+//        | LALT    | ctl-a   | ctl {      | ctl end    | ctl }      |  TAB    |               |     |     |     |     |     |      |
 //        | LCTL    | ctl-z   | ctl-x      | ctl-c      | ctl-v      |  DEL    |               |     |     |     |     |     |      |
 //                                                      | BKSPS      |LSHFT    |       | |     |     |     |
                         bindings = <
    &none   &none     &none     &kp LEFT     &kp LC(HOME) &kp RIGHT    &kp ENTER             &none &none &none &none &none &none  &none
-           &trans    &none     &kp LC(LBKT) &kp LC(END)  &kp LC(RBKT) &kp TAB               &none &none &none &none &none &none
+           &trans    &kp LC(A) &kp LC(LBKT) &kp LC(END)  &kp LC(RBKT) &kp TAB               &none &none &none &none &none &none
            &trans    &kp LC(Z) &kp LC(X)    &kp LC(C)    &kp LC(V)    &kp DEL               &none &none &none &none &none &none
                                                          &kp BSPC     &trans    &none     &none &none &none
                          >;
