@@ -13,6 +13,22 @@
 #define RSE 2
 #define ADJ 3
 
+/ {
+    macros {
+        macro_stick: macro_stick {
+            label = "macro_stick";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &kp LS(NON_US_BSLH)>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        };
+};
 
 / {
     combos {
@@ -193,12 +209,12 @@
 // -----------------------------------------------------------------------------------------
 // |  ESC |         |  \/           |   7   |   8   |    9    |   0     |               |     |     |     |     |     |      |     |
 //        | LALT    |  .,           |   4   |   5   |    6    |   =+    |               |     |     |     |     |     |      |
-//        | LCTL    |               |   1   |   2   |    3    |   -_    |               |     |     |     |     |     |      |
-//                                            |   SPC   |LSHFT    | LWR   | |     |     |     |
+//        | LCTL    |  |            |   1   |   2   |    3    |   -_    |               |     |     |     |     |     |      |
+//                                                  |   SPC   |LSHFT    | LWR   | |     |     |     |
                         bindings = <
    &kp ESC &none     &kp NON_US_BSLH &kp N7  &kp N8  &kp N9    &kp N0                    &none &none &none &none &none &none  &none
            &kp LALT  &kp SLASH       &kp N4  &kp N5  &kp N6    &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL &none           &kp N1  &kp N2  &kp N3    &kp MINUS                 &none &none &none &none &none &none
+           &kp LCTRL &macro_stick    &kp N1  &kp N2  &kp N3    &kp MINUS                 &none &none &none &none &none &none
                                                      &kp SPACE &kp LSHFT &mo LWR   &none &none &none
                         >;
                 };
