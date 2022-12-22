@@ -12,6 +12,7 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
+#define MY_COMBO_TIME 50
 
 / {
     macros {
@@ -152,7 +153,7 @@
     combos {
         compatible = "zmk,combos";
         combo_A {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <17 18>;
             bindings = <&kp F>;
             layers = <DEF>;
