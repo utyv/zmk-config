@@ -159,209 +159,250 @@
             layers = <DEF>;
         };
         combo_E {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <16 18>;
             bindings = <&kp T>;
+            layers = <DEF>;
         };
         combo_I {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <15 18>;
             bindings = <&kp B>;
+            layers = <DEF>;
         };
         combo_O {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <16 17>;
             bindings = <&kp J>;
-        };
+             layers = <DEF>;
+       };
         combo_Y {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <15 17>;
             bindings = <&kp S>;
+            layers = <DEF>;
         };
         combo_U {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <15 16>;
             bindings = <&kp E>;
+            layers = <DEF>;
         };
         combo_EE {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <17 19>;
             bindings = <&kp SQT>;
+            layers = <DEF>;
         };
         combo_YU {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <16 19>;
             bindings = <&kp DOT>;
+            layers = <DEF>;
         };
         combo_YA {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <15 19>;
             bindings = <&kp Z>;
+            layers = <DEF>;
         };
         combo_YO {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <16 17 18>;
             bindings = <&kp GRAVE>;
+            layers = <DEF>;
         };
         combo_P {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <4 5>;
             bindings = <&kp G>;
+            layers = <DEF>;
         };
         combo_B {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <29 30>;
             bindings = <&kp COMMA>;
+            layers = <DEF>;
         };
         combo_F {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <3 5>;
             bindings = <&kp A>;
-        };
+            layers = <DEF>;
+       };
         combo_V {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <28 30>;
             bindings = <&kp D>;
+            layers = <DEF>;
         };
         combo_K {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <2 5>;
             bindings = <&kp R>;
+            layers = <DEF>;
         };
         combo_G {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <27 30>;
             bindings = <&kp U>;
+            layers = <DEF>;
         };
         combo_T {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <3 4>;
             bindings = <&kp N>;
+            layers = <DEF>;
         };
         combo_D {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <28 29>;
             bindings = <&kp L>;
-        };
+            layers = <DEF>;
+       };
         combo_SH {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <2 4>;
             bindings = <&kp I>;
+            layers = <DEF>;
         };
         combo_ZH {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <27 29>;
             bindings = <&kp SEMI>;
+            layers = <DEF>;
         };
         combo_S {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <2 3>;
             bindings = <&kp C>;
-        };
+            layers = <DEF>;
+       };
         combo_Z {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <27 28>;
             bindings = <&kp P>;
+            layers = <DEF>;
         };
         combo_YI {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <4 18>;
             bindings = <&kp Q>;
+            layers = <DEF>;
         };
         combo_L {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <3 18>;
             bindings = <&kp K>;
-        };
+            layers = <DEF>;
+       };
         combo_M {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <2 18>;
             bindings = <&kp V>;
+            layers = <DEF>;
         };
         combo_N {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <17 5>;
             bindings = <&kp Y>;
+            layers = <DEF>;
         };
         combo_R {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <3 17>;
             bindings = <&kp H>;
+            layers = <DEF>;
         };
         combo_H {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <2 17>;
             bindings = <&kp LBKT>;
+            layers = <DEF>;
         };
         combo_C {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <16 5>;
             bindings = <&kp W>;
+            layers = <DEF>;
         };
         combo_CH {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <16 4>;
             bindings = <&kp X>;
+            layers = <DEF>;
         };
         combo_SCH {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <2 16>;
             bindings = <&kp O>;
+            layers = <DEF>;
         };
         combo_TVZ {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <15 5>;
             bindings = <&kp RBKT>;
+            layers = <DEF>;
         };
         combo_MZ {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <15 4>;
             bindings = <&kp M>;
+            layers = <DEF>;
         };
         combo_LT {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <2 15>;
             bindings = <&macro_LT>;
+            layers = <DEF>;
         };
         combo_GT {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <3 16>;
             bindings = <&macro_GT>;
+            layers = <DEF>;
         };
         combo_LBKT {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <5 18>;
             bindings = <&macro_LBKT>;
+            layers = <DEF>;
         };
         combo_RBKT {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <6 19>;
             bindings = <&macro_RBKT>;
+            layers = <DEF>;
         };
         combo_AMPS {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <4 17>;
             bindings = <&macro_AMPS>;
+            layers = <DEF>;
         };
         combo_AT {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <17 29>;
             bindings = <&macro_AT>;
+            layers = <DEF>;
         };
         combo_HASH {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <18 30>;
             bindings = <&macro_HASH>;
+            layers = <DEF>;
         };
         combo_DOLLAR {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <16 28>;
             bindings = <&macro_DOLLAR>;
+            layers = <DEF>;
         };
         combo_CARET {
-            timeout-ms = <50>;
+            timeout-ms = <MY_COMBO_TIME>;
             key-positions = <15 27>;
             bindings = <&macro_CARET>;
+            layers = <DEF>;
         };
     };
 };
