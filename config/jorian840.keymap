@@ -12,7 +12,7 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
-#define MY_COMBO_TIME 50
+#define MY_COMBO_TIME 100
 
 / {
     macros {
