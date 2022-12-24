@@ -146,6 +146,17 @@
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
         };
+        macro_LANG: macro_LANG {
+            label = "macro_LANG";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &tog RSE>
+                ;
+        };
     };
 };
 
@@ -404,6 +415,12 @@
             bindings = <&macro_CARET>;
             layers = <DEF>;
         };
+        combo_LANG {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <6 19>;
+            bindings = <&macro_LANG>;
+            layers = <LWR>;
+        };
     };
 };
 
@@ -440,15 +457,15 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |     | NMLK |  /  |  7  |  8  |  9  |  -  |   | VOLU| HOME| PRSC| PGUP| SCLK| CLCK|     |
-//       | CTRL |  *  |  4  |  5  |  6  |  +  |   | MUT | LEFT|  UP | RGHT| INS | APP |
-//       |      |  0  |  1  |  2  |  3  |  .  |   | VOLD| END | DOWN| PGDN| PAUS|     |
-//                          |     |     | ADJ |   | ADJ |     |     |
+// |  ESC |         |  \/           |   7   |   8   |    9    |   0     |               |     |     |     |     |     |      |     |
+//        | LALT    |  .,           |   4   |   5   |    6    |   =+    |               |     |     |     |     |     |      |
+//        | LCTL    |  |            |   1   |   2   |    3    |   -_    |               |     |     |     |     |     |      |
+//                                                  |   SPC   |LSHFT    | LWR   | |     |     |     |
                         bindings = <
-   &trans &kp KP_NUM      &kp KP_SLASH    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS        &kp C_VOL_UP &kp HOME &kp PSCRN &kp PG_UP &kp SLCK &kp CAPS &trans
-          &mt LCTRL EQUAL &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS         &kp C_MUTE   &kp LEFT &kp UP    &kp RIGHT &kp INS  &mt RCTRL K_APP
-          &trans          &kp KP_N0       &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT          &kp C_VOL_DN &kp END  &kp DOWN  &kp PG_DN &kp PAUSE_BREAK &trans
-                                                           &trans &trans &lt ADJ RET   &lt ADJ ESC &trans &trans
+   &kp ESC &none     &kp NON_US_BSLH &kp N7  &kp N8  &kp N9    &kp N0                    &none &none &none &none &none &none  &none
+           &kp LALT  &kp SLASH       &kp N4  &kp N5  &kp N6    &kp EQUAL                 &none &none &none &none &none &none
+           &kp LCTRL &macro_PIPE     &kp LS(N1)  &kp N2  &kp N3    &kp MINUS                 &none &none &none &none &none &none
+                                                     &kp SPACE &kp LSHFT &mo LWR   &none &none &none
                         >;
                 };
                 adjust_layer {
