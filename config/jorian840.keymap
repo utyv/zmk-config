@@ -146,15 +146,26 @@
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
         };
-        macro_LANG: macro_LANG {
-            label = "macro_LANG";
+        macro_ENG: macro_ENG {
+            label = "macro_ENG";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_wait_time 1>
                 , <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
-                , <&macro_tap &tog RSE>
+                , <&macro_tap &to RSE>
+                ;
+        };
+        macro_RU: macro_RU {
+            label = "macro_RU";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &to DEF>
                 ;
         };
     };
@@ -415,11 +426,17 @@
             bindings = <&macro_CARET>;
             layers = <DEF>;
         };
-        combo_LANG {
+        combo_ENG {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <6 19>;
-            bindings = <&macro_LANG>;
+            bindings = <&macro_ENG>;
             layers = <LWR>;
+        };
+        combo_RU {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <19 31>;
+            bindings = <&macro_RU>;
+            layers = <RSE>;
         };
     };
 };
