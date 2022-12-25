@@ -237,6 +237,12 @@
             bindings = <&kp F>;
             layers = <DEF>;
         };
+        combo_ENG_A {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <17 18>;
+            bindings = <&kp A>;
+            layers = <LWR>;
+        };
         combo_E {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <16 18>;
