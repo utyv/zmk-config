@@ -428,13 +428,13 @@
         };
         combo_ENG {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <6 19>;
+            key-positions = <27 31>;
             bindings = <&macro_ENG>;
-            layers = <LWR>;
+            layers = <DEF>;
         };
         combo_RU {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <19 31>;
+            key-positions = <28 31>;
             bindings = <&macro_RU>;
             layers = <RSE>;
         };
