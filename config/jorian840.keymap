@@ -461,13 +461,13 @@
         };
         combo_ENG {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <27 31>;
+            key-positions = <30 38>;
             bindings = <&macro_ENG>;
             layers = <DEF>;
         };
         combo_RU {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <28 31>;
+            key-positions = <29 38>;
             bindings = <&macro_RU>;
             layers = <LWR>;
         };
