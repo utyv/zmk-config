@@ -249,23 +249,47 @@
             bindings = <&kp T>;
             layers = <DEF>;
         };
+         combo_ENG_E {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <16 18>;
+            bindings = <&kp E>;
+            layers = <LWR>;
+        };
         combo_I {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <15 18>;
             bindings = <&kp B>;
             layers = <DEF>;
         };
+        combo_ENG_I {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <15 18>;
+            bindings = <&kp I>;
+            layers = <LWR>;
+        };
         combo_O {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <16 17>;
             bindings = <&kp J>;
-             layers = <DEF>;
-       };
+            layers = <DEF>;
+        };
+        combo_ENG_O {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <16 17>;
+            bindings = <&kp O>;
+            layers = <LWR>;
+        };
         combo_Y {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <15 17>;
             bindings = <&kp S>;
             layers = <DEF>;
+        };
+        combo_ENG_Y {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <15 17>;
+            bindings = <&kp Y>;
+            layers = <LWR>;
         };
         combo_U {
             timeout-ms = <MY_COMBO_TIME>;
