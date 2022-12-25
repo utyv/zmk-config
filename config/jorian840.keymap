@@ -38,6 +38,17 @@
                 , <&macro_release &kp LALT>
                 ;
         };
+        macro_SEMI: macro_SEMI {
+            label = "macro_SEMI";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N5 &kp KP_N9>
+                , <&macro_release &kp LALT>
+                ;
+        };
          macro_PIPE: macro_PIPE {
             label = "macro_PIPE";
             compatible = "zmk,behavior-macro";
@@ -469,14 +480,14 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |         |  ,            |   7   |   8   |    9    |   =+    |               |     |     |     |     |     |      |     |
-//        | LALT    |  .            |   4   |   5   |    6    |   0     |               |     |     |     |     |     |      |
-//        | LCTL    |  |            |   1   |   2   |    3    |   -_    |               |     |     |     |     |     |      |
+// |  ESC |         |  ,            |   7   |   8   |    9    |   0     |               |     |     |     |     |     |      |     |
+//        | LALT    |  .            |   4   |   5   |    6    |   +=    |               |     |     |     |     |     |      |
+//        | LCTL    |  ;            |   1   |   2   |    3    |   -_    |               |     |     |     |     |     |      |
 //                                                  |   SPC   |LSHFT    | RSE   | |     |     |     |
                         bindings = <
-   &kp ESC &none     &macro_COMMA    &kp N7  &kp N8  &kp N9    &kp EQUAL                 &none &none &none &none &none &none  &none
-           &kp LALT  &macro_DOT      &kp N4  &kp N5  &kp N6    &kp N0                    &none &none &none &none &none &none
-           &kp LCTRL &macro_PIPE     &kp N1  &kp N2  &kp N3    &kp MINUS                 &none &none &none &none &none &none
+   &kp ESC &none     &macro_COMMA    &kp N7  &kp N8  &kp N9    &kp N0                    &none &none &none &none &none &none  &none
+           &kp LALT  &macro_DOT      &kp N4  &kp N5  &kp N6    &kp EQUAL                 &none &none &none &none &none &none
+           &kp LCTRL &macro_SEMI     &kp N1  &kp N2  &kp N3    &kp MINUS                 &none &none &none &none &none &none
                                                      &kp SPACE &kp LSHFT &mo RSE   &none &none &none
                         >;
                 };
