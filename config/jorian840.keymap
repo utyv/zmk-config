@@ -71,6 +71,50 @@
                 , <&macro_release &kp LALT>
                 ;
         };
+        macro_LBKT: macro_LBKT {
+            label = "macro_LBKT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N1>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_RBKT: macro_RBKT {
+            label = "macro_RBKT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N3>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_LBRC: macro_LBRC {
+            label = "macro_LBRC";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_RBRC: macro_RBRC {
+            label = "macro_RBRC";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N5>
+                , <&macro_release &kp LALT>
+                ;
+        };
         macro_PIPE: macro_PIPE {
             label = "macro_PIPE";
             compatible = "zmk,behavior-macro";
@@ -80,32 +124,6 @@
                 , <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
                 , <&macro_tap &kp LS(NON_US_BSLH)>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                ;
-        };
-        macro_LBKT: macro_LBKT {
-            label = "macro_LBKT";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 1>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                , <&macro_tap &kp LBKT>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                ;
-        };
-        macro_RBKT: macro_RBKT {
-            label = "macro_RBKT";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 1>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                , <&macro_tap &kp RBKT>
                 , <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
@@ -238,6 +256,34 @@
             label = "RU_GT";
             #binding-cells = <0>;
             bindings = <&macro_GT>, <&macro_GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_lbkt: ru_lbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_LBKT";
+            #binding-cells = <0>;
+            bindings = <&macro_LBKT>, <&macro_LBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_rbkt: ru_rbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_RBKT";
+            #binding-cells = <0>;
+            bindings = <&macro_RBKT>, <&macro_RBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        eng_lbkt: eng_lbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_LBKT";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp LS(LBKT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        eng_rbkt: eng_rbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_RBKT";
+            #binding-cells = <0>;
+            bindings = <&kp RBKT>, <&kp LS(RBKT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -693,14 +739,26 @@
         combo_LBKT {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <5 18>;
-            bindings = <&macro_LBKT>;
+            bindings = <&ru_lbkt>;
             layers = <DEF>;
+        };
+        combo_ENG_LBKT {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <5 18>;
+            bindings = <&eng_lbkt>;
+            layers = <LWR>;
         };
         combo_RBKT {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <6 19>;
-            bindings = <&macro_RBKT>;
+            bindings = <&ru_rbkt>;
             layers = <DEF>;
+        };
+        combo_ENG_RBKT {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <6 19>;
+            bindings = <&eng_rbkt>;
+            layers = <LWR>;
         };
         combo_AMPS {
             timeout-ms = <MY_COMBO_TIME>;
