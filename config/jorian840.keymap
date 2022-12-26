@@ -459,6 +459,12 @@
             bindings = <&kp W>;
             layers = <LWR>;
         };
+        combo_ZH {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <27 29>;
+            bindings = <&kp SEMI>;
+            layers = <DEF>;
+        };
         combo_ENG_ZH {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <27 29>;
@@ -476,6 +482,12 @@
             key-positions = <2 3>;
             bindings = <&kp S>;
             layers = <LWR>;
+        };
+        combo_Z {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <27 28>;
+            bindings = <&kp P>;
+            layers = <DEF>;
         };
         combo_ENG_Z {
             timeout-ms = <MY_COMBO_TIME>;
