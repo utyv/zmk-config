@@ -621,7 +621,7 @@
             bindings = <&kp M>;
             layers = <DEF>;
         };
-        combo_MZ {
+        combo_ENG_MZ {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <15 4>;
             bindings = <&kp SQT>;
