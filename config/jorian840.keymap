@@ -312,9 +312,9 @@
             bindings = <&macro_AT>, <&macro_SQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        eng_amps: eng_amps {
+        eng_at: eng_at {
             compatible = "zmk,behavior-mod-morph";
-            label = "ENG_AMPS";
+            label = "ENG_AT";
             #binding-cells = <0>;
             bindings = <&kp LS(N2)>, <&kp SQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
