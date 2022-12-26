@@ -49,6 +49,28 @@
                 , <&macro_release &kp LALT>
                 ;
         };
+        macro_LT: macro_LT {
+            label = "macro_LT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N0>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_GT: macro_GT {
+            label = "macro_GT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N2>
+                , <&macro_release &kp LALT>
+                ;
+        };
         macro_PIPE: macro_PIPE {
             label = "macro_PIPE";
             compatible = "zmk,behavior-macro";
@@ -58,32 +80,6 @@
                 , <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
                 , <&macro_tap &kp LS(NON_US_BSLH)>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                ;
-        };
-        macro_LT: macro_LT {
-            label = "macro_LT";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 1>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                , <&macro_tap &kp LS(COMMA)>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                ;
-        };
-        macro_GT: macro_GT {
-            label = "macro_GT";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 1>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                , <&macro_tap &kp LS(DOT)>
                 , <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
@@ -662,11 +658,23 @@
             bindings = <&macro_LT>;
             layers = <DEF>;
         };
+        combo_ENG_LT {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <2 15>;
+            bindings = <&kp LS(COMMA)>;
+            layers = <LWR>;
+        };
         combo_GT {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <3 16>;
             bindings = <&macro_GT>;
             layers = <DEF>;
+        };
+        combo_ENG_GT {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <3 16>;
+            bindings = <&kp LS(DOT)>;
+            layers = <LWR>;
         };
         combo_LBKT {
             timeout-ms = <MY_COMBO_TIME>;
