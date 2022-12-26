@@ -159,6 +159,50 @@
                 , <&macro_release &kp LALT>
                 ;
         };
+        macro_NUMBER: macro_NUMBER {
+            label = "macro_NUMBER";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N2 &kp KP_N5 &kp KP_N2>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_PARAGRAF: macro_PARAGRAF {
+            label = "macro_PARAGRAF";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N2 &kp KP_N1>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_GRAVE: macro_GRAVE {
+            label = "macro_GRAVE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N6>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_TILDE: macro_TILDE {
+            label = "macro_TILDE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N6>
+                , <&macro_release &kp LALT>
+                ;
+        };
         macro_ENG: macro_ENG {
             label = "macro_ENG";
             compatible = "zmk,behavior-macro";
@@ -317,6 +361,20 @@
             label = "ENG_AT";
             #binding-cells = <0>;
             bindings = <&kp LS(N2)>, <&kp SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_number: ru_number {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_NUMBER";
+            #binding-cells = <0>;
+            bindings = <&macro_NUMBER>, <&macro_PARAGRAF>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_grave: ru_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_NUMBER";
+            #binding-cells = <0>;
+            bindings = <&macro_GRAVE>, <&macro_TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -816,6 +874,18 @@
             key-positions = <17 29>;
             bindings = <&eng_at>;
             layers = <LWR>;
+        };
+        combo_NUMBER {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <18 30>;
+            bindings = <&ru_number>;
+            layers = <DEF LWR>;
+        };
+        combo_GRAVE {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <16 28>;
+            bindings = <&ru_grave>;
+            layers = <DEF LWR>;
         };
     };
 };
