@@ -372,7 +372,7 @@
         };
         ru_grave: ru_grave {
             compatible = "zmk,behavior-mod-morph";
-            label = "RU_NUMBER";
+            label = "RU_GRAVE";
             #binding-cells = <0>;
             bindings = <&macro_GRAVE>, <&macro_TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
