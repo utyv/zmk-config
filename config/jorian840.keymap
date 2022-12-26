@@ -190,7 +190,7 @@
         };
         ru_semi_colon: ru_semi_colon {
             compatible = "zmk,behavior-mod-morph";
-            label = "RU_HASH";
+            label = "RU_SEMI_COLON";
             #binding-cells = <0>;
             bindings = <&kp LS(N4)>, <&kp LS(N6)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
