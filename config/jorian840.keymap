@@ -16,7 +16,18 @@
 
 / {
     macros {
-         macro_PIPE: macro_PIPE {
+        macro_HASH: macro_HASH {
+            label = "macro_HASH";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N3 &kp KP_N5>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_PIPE: macro_PIPE {
             label = "macro_PIPE";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -107,19 +118,6 @@
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
         };
-        macro_HASH: macro_HASH {
-            label = "macro_HASH";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 1>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                , <&macro_tap &kp LS(N3)>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                ;
-        };
         macro_DOLLAR: macro_DOLLAR {
             label = "macro_DOLLAR";
             compatible = "zmk,behavior-macro";
@@ -185,6 +183,13 @@
             label = "ENG_DQT";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp LS(SQT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_hash: ru_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_HASH";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&macro_HASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
