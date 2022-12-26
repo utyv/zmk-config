@@ -196,7 +196,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "RU_HASH";
             #binding-cells = <0>;
-            bindings = <&kp LS(N4)>, <&LS(N6)>;
+            bindings = <&kp LS(N4)>, <&kp LS(N6)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         ru_slash: ru_slash {
@@ -722,7 +722,7 @@
                         bindings = <
    &kp ESC &none     &kp SEMI        &kp N7  &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
            &kp LALT  &eng_dot_comma  &kp N4  &kp N5   &kp N6    &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL &macro_PIPE     &kp N1  &eng_dqt &kp N3    &kp MINUS                 &none &none &none &none &none &none
+           &kp LCTRL &eng_slash      &kp N1  &eng_dqt &kp N3    &kp MINUS                 &none &none &none &none &none &none
                                                       &kp SPACE &kp LSHFT &mo RSE   &none &none &none
                          >;
                 };
