@@ -115,30 +115,26 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        macro_PIPE: macro_PIPE {
-            label = "macro_PIPE";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 1>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                , <&macro_tap &kp LS(NON_US_BSLH)>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                ;
-        };
         macro_AMPS: macro_AMPS {
             label = "macro_AMPS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_wait_time 1>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                , <&macro_tap &kp LS(N7)>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N3 &kp KP_N8>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_PIPE: macro_PIPE {
+            label = "macro_PIPE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N4>
+                , <&macro_release &kp LALT>
                 ;
         };
         macro_AT: macro_AT {
@@ -147,11 +143,20 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_wait_time 1>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
-                , <&macro_tap &kp LS(N2)>
-                , <&macro_press &kp LALT &kp LSHFT>
-                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N4>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_SQT: macro_SQT {
+            label = "macro_SQT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N3 &kp KP_N9>
+                , <&macro_release &kp LALT>
                 ;
         };
         macro_ENG: macro_ENG {
@@ -284,6 +289,34 @@
             label = "ENG_RBKT";
             #binding-cells = <0>;
             bindings = <&kp RBKT>, <&kp LS(RBKT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_amps: ru_amps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_AMPS";
+            #binding-cells = <0>;
+            bindings = <&macro_AMPS>, <&macro_PIPE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        eng_amps: eng_amps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_AMPS";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N7)>, <&kp LS(NUBS)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_at: ru_at {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_AT";
+            #binding-cells = <0>;
+            bindings = <&macro_AT>, <&macro_SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        eng_amps: eng_amps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_AMPS";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N2)>, <&kp SQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -763,14 +796,26 @@
         combo_AMPS {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <4 17>;
-            bindings = <&macro_AMPS>;
+            bindings = <&ru_amps>;
             layers = <DEF>;
+        };
+        combo_ENG_AMPS {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <4 17>;
+            bindings = <&eng_amps>;
+            layers = <LWR>;
         };
         combo_AT {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <17 29>;
-            bindings = <&macro_AT>;
+            bindings = <&ru_at>;
             layers = <DEF>;
+        };
+        combo_ENG_AT {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <17 29>;
+            bindings = <&eng_at>;
+            layers = <LWR>;
         };
     };
 };
