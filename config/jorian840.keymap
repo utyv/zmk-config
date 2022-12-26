@@ -226,6 +226,20 @@
             bindings = <&kp N7>, <&kp LS(SLASH)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        ru_lt: ru_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_LT";
+            #binding-cells = <0>;
+            bindings = <&macro_LT>, <&macro_LT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_gt: ru_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_GT";
+            #binding-cells = <0>;
+            bindings = <&macro_GT>, <&macro_GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 };
 
@@ -655,7 +669,7 @@
         combo_LT {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <2 15>;
-            bindings = <&macro_LT>;
+            bindings = <&ru_lt>;
             layers = <DEF>;
         };
         combo_ENG_LT {
@@ -667,7 +681,7 @@
         combo_GT {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <3 16>;
-            bindings = <&macro_GT>;
+            bindings = <&ru_gt>;
             layers = <DEF>;
         };
         combo_ENG_GT {
