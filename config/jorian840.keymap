@@ -887,6 +887,30 @@
             bindings = <&ru_grave>;
             layers = <DEF LWR>;
         };
+        combo_LEFT {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <3 16>;
+            bindings = <&kp LEFT>;
+            layers = <RSE>;
+        };
+        combo_RIGHT {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <5 18>;
+            bindings = <&kp RIGHT>;
+            layers = <RSE>;
+        };
+        combo_UP {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <4 17>;
+            bindings = <&kp UP>;
+            layers = <RSE>;
+        };
+        combo_DOWN {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <17 29>;
+            bindings = <&kp DOWN>;
+            layers = <RSE>;
+        };
     };
 };
 
