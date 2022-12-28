@@ -923,15 +923,15 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |      | F12     | PrntScr | <-         | ctl home   | ->         | ENTER   |               |     |     |     |     |     |      |     |
-//        | LALT    | ctl-a   | ctl {      | ctl end    | ctl }      |  TAB    |               |     |     |     |     |     |      |
-//        | LCTL    | ctl-z   | ctl-x      | ctl-c      | ctl-v      |  DEL    |               |     |     |     |     |     |      |
-//                                                      | BKSPS      |LSHFT    |       | |     |     |     |
+// |            | F12      | PrntScr | ctl {      | ctl home   | ctl }      | ENTER   |               |     |     |     |     |     |      |     |
+//              | LALT     | ctl-a   | home       | ctl end    | end        |  TAB    |               |     |     |     |     |     |      |
+//              | LCTL     | ctl-z   | ctl-x      | ctl-c      | ctl-v      |  DEL    |               |     |     |     |     |     |      |
+//                                                             | BKSPS      |LSHFT    |       | |     |     |     |
                         bindings = <
-   &kp LC(MINUS) &kp F12   &kp PSCRN &kp LEFT     &kp LC(HOME) &kp RIGHT    &kp ENTER                   &none &none &none &none &none &none  &none
-                 &trans    &kp LC(A) &kp LC(LBKT) &kp LC(END)  &kp LC(RBKT) &kp TAB                     &none &none &none &none &none &none
-                 &trans    &kp LC(Z) &kp LC(X)    &kp LC(C)    &kp LC(V)    &kp DEL                     &none &none &none &none &none &none
-                                                               &kp BSPC     &trans      &none     &none &none &none
+   &kp LC(MINUS) &kp F12    &kp PSCRN &kp LC(LBKT) &kp LC(HOME) &kp LC(RBKT) &kp ENTER                   &none &none &none &none &none &none  &none
+                 &trans     &kp LC(A) &kp HOME     &kp LC(END)  &kp END      &kp TAB                     &none &none &none &none &none &none
+                 &trans     &kp LC(Z) &kp LC(X)    &kp LC(C)    &kp LC(V)    &kp DEL                     &none &none &none &none &none &none
+                                                                &kp BSPC     &trans      &none     &none &none &none
                         >;
                 };
                 adjust_layer {
