@@ -697,25 +697,25 @@
         };
         combo_M {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <2 18>;
+            key-positions = <27 18>;
             bindings = <&kp V>;
             layers = <DEF>;
         };
         combo_ENG_M {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <2 18>;
+            key-positions = <27 18>;
             bindings = <&kp M>;
             layers = <LWR>;
         };
         combo_N {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <17 5>;
+            key-positions = <17 30>;
             bindings = <&kp Y>;
             layers = <DEF>;
         };
         combo_ENG_N {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <17 5>;
+            key-positions = <17 30>;
             bindings = <&kp N>;
             layers = <LWR>;
         };
