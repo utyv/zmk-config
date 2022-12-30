@@ -998,7 +998,7 @@
                         bindings = <
    &kp LC(MINUS) &kp F12          &kp PSCRN   &kp LC(LBKT) &kp LC(HOME) &kp LC(RBKT) &kp ENTER                   &none &none &none &none &none &none  &none
                  &kp LC(KP_SLASH) &kp LC(A)   &kp HOME     &kp LC(END)  &kp END      &kp TAB                     &none &none &none &none &none &none
-                 &trans           &macro_UNDO &macro_CU    &macro_COPY  &macro_PASTE &kp DEL                     &none &none &none &none &none &none
+                 &trans           &macro_UNDO &macro_CUT   &macro_COPY  &macro_PASTE &kp DEL                     &none &none &none &none &none &none
                                                                         &kp BSPC     &trans      &none     &none &none &none
                         >;
                 };
