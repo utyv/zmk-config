@@ -765,13 +765,13 @@
         };
         combo_R {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <3 17>;
+            key-positions = <28 17>;
             bindings = <&kp H>;
             layers = <DEF>;
         };
         combo_ENG_R {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <3 17>;
+            key-positions = <28 17>;
             bindings = <&kp R>;
             layers = <LWR>;
         };
@@ -813,13 +813,13 @@
         };
         combo_SCH {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <2 16>;
+            key-positions = <27 16>;
             bindings = <&kp O>;
             layers = <DEF>;
         };
         combo_ENG_SCH {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <2 16>;
+            key-positions = <27 16>;
             bindings = <&kp W>;
             layers = <LWR>;
         };
