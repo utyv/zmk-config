@@ -470,7 +470,7 @@
         };
         combo_LANG {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <30 38>;
+            key-positions = <31 38>;
             bindings = <&macro_LANG>;
             layers = <DEF LWR>;
         };
