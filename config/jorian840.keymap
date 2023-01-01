@@ -284,7 +284,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 1>
+                = <&macro_wait_time 0>
                 , <&macro_tap &kp LS(T) &kp C &kp K &kp B>
                 ;
         };
@@ -293,7 +293,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 1>
+                = <&macro_wait_time 0>
                 , <&macro_tap &kp LS(N) &kp J &kp U &kp L &kp F>
                 ;
         };
@@ -302,7 +302,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 1>
+                = <&macro_wait_time 0>
                 , <&macro_tap &kp LS(B) &kp Y &kp F &kp X &kp T>
                 ;
         };
@@ -311,7 +311,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 1>
+                = <&macro_wait_time 0>
                 , <&macro_tap &kp LS(R) &kp J &kp Y &kp T &kp W>
                 ;
         };
@@ -320,7 +320,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 1>
+                = <&macro_wait_time 0>
                 , <&macro_tap &kp LS(L) &kp K &kp Z>
                 ;
         };
@@ -329,7 +329,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 1>
+                = <&macro_wait_time 0>
                 , <&macro_tap &kp LS(G) &kp J &kp R &kp F>
                 ;
         };
@@ -338,7 +338,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 1>
+                = <&macro_wait_time 0>
                 , <&macro_tap &kp LS(W) &kp B &kp R &kp K>
                 ;
         };
@@ -349,6 +349,24 @@
             bindings
                 = <&macro_wait_time 0>
                 , <&macro_tap &kp LS(R) &kp F &kp SEMI &kp L &kp J &kp U &kp J>
+                ;
+        };
+        macro_PROC: macro_PROC {
+            label = "macro_PROC";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 0>
+                , <&macro_tap &kp LS(G) &kp H &kp J &kp W &kp T &kp L &kp E &kp H>
+                ;
+        };
+        macro_FUNC: macro_FUNC {
+            label = "macro_FUNC";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 0>
+                , <&macro_tap &kp LS(A) &kp E &kp Y &kp R &kp W &kp B>
                 ;
         };
    };
@@ -536,6 +554,13 @@
             label = "ST_LOOPEACH";
             #binding-cells = <0>;
             bindings = <&macro_LOOP>, <&macro_EACH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        st_procfunc: st_procfunc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_PROCFUNC";
+            #binding-cells = <0>;
+            bindings = <&macro_PROC>, <&macro_FUNC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -1127,10 +1152,10 @@
                 };
                 adjust_layer {
                         bindings = <
-   &none  &none  &none &none        &st_loopeach &st_elseend  &none                    &none  &none &none &none &none  &none &none
-          &none  &none &none        &st_forwhi   &st_ifthen   &kp TAB                  &none  &none &none &none &none  &none
-          &none  &none &none        &none        &none        &none                    &none  &none &none &none &none  &none
-                                                 &none        &kp LSHFT &kp LALT &none &none  &none
+   &none  &none  &none &none        &st_loopeach &st_elseend  &none                       &none  &none &none &none &none  &none &none
+          &none  &none &none        &st_forwhi   &st_ifthen   &kp TAB                     &none  &none &none &none &none  &none
+          &none  &none &none        &none        &none        &st_procfunc                &none  &none &none &none &none  &none
+                                                 &none        &kp LSHFT    &kp LALT &none &none  &none
                         >;
                 };
         };
