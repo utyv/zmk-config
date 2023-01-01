@@ -297,7 +297,25 @@
                 , <&macro_tap &kp LS(N) &kp J &kp U &kp L &kp F>
                 ;
         };
-    };
+        macro_ELSE: macro_ELSE {
+            label = "macro_ELSE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(B) &kp Y &kp F &kp X &kp T>
+                ;
+        };
+        macro_END: macro_END {
+            label = "macro_END";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(R) &kp J &kp Y &kp T &kp W>
+                ;
+        };
+   };
 };
 
 / {
@@ -461,6 +479,13 @@
             label = "ST_IFTHEN";
             #binding-cells = <0>;
             bindings = <&macro_IF>, <&macro_THEN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        st_elseend: st_elseend {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_ELSEEND";
+            #binding-cells = <0>;
+            bindings = <&macro_ELSE>, <&macro_END>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -1052,7 +1077,7 @@
                 };
                 adjust_layer {
                         bindings = <
-   &none  &none  &none &none        &none        &none        &none                    &none  &none &none &none &none  &none &none
+   &none  &none  &none &none        &none        &st_elseend  &none                    &none  &none &none &none &none  &none &none
           &none  &none &none        &none        &st_ifthen   &kp TAB                  &none  &none &none &none &none  &none
           &none  &none &none        &none        &none        &none                    &none  &none &none &none &none  &none
                                                  &none        &kp LSHFT &kp LALT &none &none  &none
