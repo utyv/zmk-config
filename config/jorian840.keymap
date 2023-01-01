@@ -535,7 +535,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "ST_LOOPEACH";
             #binding-cells = <0>;
-            bindings = <&macro_FOR>, <&macro_WHILE>;
+            bindings = <&macro_LOOP>, <&macro_EACH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
