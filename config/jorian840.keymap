@@ -280,12 +280,21 @@
                 ;
         };
         macro_IF: macro_IF {
-            label = "macro_PASTE";
+            label = "macro_IF";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(T) &kp C &kp K &kp B>
+                ;
+        };
+        macro_THEN: macro_THEN {
+            label = "macro_THEN";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(N) &kp J &kp U &kp L &kp F>
                 ;
         };
     };
@@ -445,6 +454,13 @@
             label = "CTL_PRNBRK";
             #binding-cells = <0>;
             bindings = <&kp PSCRN>, <&kp LC(PAUSE_BREAK)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        st_ifthen: st_ifthen {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_IFTHEN";
+            #binding-cells = <0>;
+            bindings = <&macro_IF>, <&macro_THEN>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -1037,9 +1053,9 @@
                 adjust_layer {
                         bindings = <
    &none  &none  &none &none        &none        &none        &none                    &none  &none &none &none &none  &none &none
-          &none  &none &none        &none        &macro_IF    &kp TAB                  &none  &none &none &none &none  &none
+          &none  &none &none        &none        &st_ifthen   &kp TAB                  &none  &none &none &none &none  &none
           &none  &none &none        &none        &none        &none                    &none  &none &none &none &none  &none
-                                                 &none        &none  &kp LALT    &none &none  &none
+                                                 &none        &kp LSHFT &kp LALT &none &none  &none
                         >;
                 };
         };
