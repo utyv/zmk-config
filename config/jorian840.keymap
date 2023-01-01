@@ -1028,7 +1028,7 @@
                 adjust_layer {
                         bindings = <
    &none  &none  &none &none        &none        &none        &none                    &none  &none &none &none &none  &none &none
-          &none  &none &none        &none        &kp F        &none                    &none  &none &none &none &none  &none
+          &none  &none &none        &none        &kp F        &kp TAB                  &none  &none &none &none &none  &none
           &none  &none &none        &none        &none        &none                    &none  &none &none &none &none  &none
                                                  &none        &none  &kp LALT    &none &none  &none
                         >;
