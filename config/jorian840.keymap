@@ -421,6 +421,13 @@
             bindings = <&macro_GRAVE>, <&macro_TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        ctl_prnbrk: ctl_prnbrk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTL_PRNBRK";
+            #binding-cells = <0>;
+            bindings = <&kp PSCRN>, <&kp LC(PAUSE_BREAK)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 };
 
@@ -996,7 +1003,7 @@
 //              | LCTL           | ctl-z     | ctl-x      | ctl-c      | ctl-v      |  DEL    |               |     |     |     |     |     |      |
 //                                                                     | BKSPS      |LSHFT    |       | |     |     |     |
                         bindings = <
-   &kp LC(MINUS) &kp F12          &kp PSCRN   &kp LC(LBKT) &kp LC(HOME) &kp LC(RBKT) &kp ENTER                   &none &none &none &none &none &none  &none
+   &kp LC(MINUS) &kp F12          &ctl_prnbrk &kp LC(LBKT) &kp LC(HOME) &kp LC(RBKT) &kp ENTER                   &none &none &none &none &none &none  &none
                  &kp LC(KP_SLASH) &kp LC(A)   &kp HOME     &kp LC(END)  &kp END      &kp TAB                     &none &none &none &none &none &none
                  &trans           &macro_UNDO &macro_CUT   &macro_COPY  &macro_PASTE &kp DEL                     &none &none &none &none &none &none
                                                                         &kp BSPC     &trans      &none     &none &none &none
