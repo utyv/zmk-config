@@ -235,14 +235,22 @@
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
         };
-        macro_ALTAB: macro_ALTAB {
-            label = "macro_ALTAB";
+        macro_ALTP: macro_ALTP {
+            label = "macro_ALTP";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_ALTR: macro_ALTR {
+            label = "macro_ALTR";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_wait_time 1>
                 , <&macro_press &kp LALT>
-                , <&macro_tap &kp TAB>
                 ;
         };
        macro_UNDO: macro_UNDO {
@@ -536,6 +544,13 @@
             label = "CTL_PRNBRK";
             #binding-cells = <0>;
             bindings = <&kp PSCRN>, <&kp LC(PAUSE_BREAK)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        tog_alt: tog_alt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TOG_ALT";
+            #binding-cells = <0>;
+            bindings = <&macro_ALTP>, <&macro_ALTR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         st_ifthen: st_ifthen {
@@ -1156,7 +1171,7 @@
                         bindings = <
    &kp LC(MINUS) &kp F12          &ctl_prnbrk &kp LC(LBKT) &kp LC(HOME) &kp LC(RBKT) &kp ENTER                   &none &none &none &none &none &none  &none
                  &kp LC(KP_SLASH) &kp LC(A)   &kp HOME     &kp LC(END)  &kp END      &kp TAB                     &none &none &none &none &none &none
-                 &macro_ALTAB     &macro_UNDO &macro_CUT   &macro_COPY  &macro_PASTE &kp DEL                     &none &none &none &none &none &none
+                 &tog_alt         &macro_UNDO &macro_CUT   &macro_COPY  &macro_PASTE &kp DEL                     &none &none &none &none &none &none
                                                                         &kp BSPC     &trans      &none     &none &none &none
                         >;
                 };
