@@ -347,7 +347,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 1>
+                = <&macro_wait_time 0>
                 , <&macro_tap &kp LS(R) &kp F &kp SEMI &kp L &kp J &kp U &kp J>
                 ;
         };
@@ -521,7 +521,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "ST_ELSEEND";
             #binding-cells = <0>;
-            bindings = <&macro_ELSE>, <&macro_END>;
+            bindings = <&macro_END>, <&macro_ELSE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         st_forwhi: st_forwhi {
