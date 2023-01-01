@@ -800,13 +800,13 @@
         };
         combo_H {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <2 17>;
+            key-positions = <27 17>;
             bindings = <&kp LBKT>;
             layers = <DEF>;
         };
         combo_ENG_H {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <2 17>;
+            key-positions = <27 17>;
             bindings = <&kp H>;
             layers = <LWR>;
         };
