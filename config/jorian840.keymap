@@ -241,7 +241,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_wait_time 1>
-                , <&macro_release &kp LALT>
+                , <&macro_press &kp LALT>
                 ;
         };
         macro_ALTR: macro_ALTR {
@@ -250,7 +250,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_wait_time 1>
-                , <&macro_press &kp LALT>
+                , <&macro_release &kp LALT>
                 ;
         };
        macro_UNDO: macro_UNDO {
