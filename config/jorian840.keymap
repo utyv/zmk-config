@@ -802,25 +802,25 @@
         };
         combo_C {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <16 5>;
+            key-positions = <16 30>;
             bindings = <&kp W>;
             layers = <DEF>;
         };
         combo_ENG_C {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <16 5>;
+            key-positions = <16 30>;
             bindings = <&kp C>;
             layers = <LWR>;
         };
         combo_CH {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <16 4>;
+            key-positions = <16 29>;
             bindings = <&kp X>;
             layers = <DEF>;
         };
         combo_ENG_CH {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <16 4>;
+            key-positions = <16 29>;
             bindings = <&kp X>;
             layers = <LWR>;
         };
