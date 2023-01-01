@@ -1108,25 +1108,25 @@
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <3 16>;
             bindings = <&kp LEFT>;
-            layers = <RSE>;
+            layers = <ADJ>;
         };
         combo_RIGHT {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <5 18>;
             bindings = <&kp RIGHT>;
-            layers = <RSE>;
+            layers = <ADJ>;
         };
         combo_UP {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <4 17>;
             bindings = <&kp UP>;
-            layers = <RSE>;
+            layers = <ADJ>;
         };
         combo_DOWN {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <17 29>;
             bindings = <&kp DOWN>;
-            layers = <RSE>;
+            layers = <ADJ>;
         };
     };
 };
@@ -1139,30 +1139,39 @@
 // -----------------------------------------------------------------------------------------
 // |  ESC |         |  ; :          |   7      |   8   |    9    |   0     |               |     |     |     |     |     |      |     |
 //        | /\      |  .,           |  4 $     |   5   |   6 ^   |   +=    |               |     |     |     |     |     |      |
-//        | LCTL    |               |   1      |   2   |   3 #   |   -_    |               |     |     |     |     |     |      |
-//                                                     |   SPC   |LSHFT    | RSE   | |     |     |     |
+//        | LCTL    |  RSE          |   1      |   2   |   3 #   |   -_    |               |     |     |     |     |     |      |
+//                                                     |   SPC   |LSHFT    | ADJ   | |     |     |     |
                         bindings = <
    &kp ESC &none     &ru_semi_colon  &kp N7     &kp N8  &kp N9    &kp N0                    &none &none &none &none &none &none  &none
            &ru_slash &kp SLASH       &ru_dollar &kp N5  &ru_caret &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL &mo ADJ         &kp N1     &kp N2  &ru_hash  &kp MINUS                 &none &none &none &none &none &none
-                                                        &kp SPACE &kp LSHFT &mo RSE   &none &none &none
+           &kp LCTRL &mo RSE         &kp N1     &kp N2  &ru_hash  &kp MINUS                 &none &none &none &none &none &none
+                                                        &kp SPACE &kp LSHFT &mo ADJ   &none &none &none
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  ESC |         |  ; :          |  7 ?     |   8    |    9    |   0     |               |     |     |     |     |     |      |     |
 //        | /\      |  .,           |   4      |   5    |    6    |   =+    |               |     |     |     |     |     |      |
-//        | LCTL    |               |   1      |  2 "   |    3    |   -_    |               |     |     |     |     |     |      |
-//                                                      |   SPC   |LSHFT    | RSE   | |     |     |     |
+//        | LCTL    |  RSE          |   1      |  2 "   |    3    |   -_    |               |     |     |     |     |     |      |
+//                                                      |   SPC   |LSHFT    | ADJ   | |     |     |     |
                         bindings = <
    &kp ESC &none      &kp SEMI        &eng_qmark &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
            &eng_slash &eng_dot_comma  &kp N4     &kp N5   &kp N6    &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL  &mo ADJ         &kp N1     &eng_dqt &kp N3    &kp MINUS                 &none &none &none &none &none &none
-                                                          &kp SPACE &kp LSHFT &mo RSE   &none &none &none
+           &kp LCTRL  &mo RSE         &kp N1     &eng_dqt &kp N3    &kp MINUS                 &none &none &none &none &none &none
+                                                          &kp SPACE &kp LSHFT &mo ADJ   &none &none &none
                          >;
                 };
 
                 raise_layer {
+                        bindings = <
+   &none  &none  &none &none        &st_loopeach &st_elseend  &none                       &none  &none &none &none &none  &none &none
+          &none  &none &none        &st_forwhi   &st_ifthen   &none                       &none  &none &none &none &none  &none
+          &none  &none &none        &none        &none        &st_procfunc                &none  &none &none &none &none  &none
+                                                 &trans       &trans       &trans   &none &none  &none
+                        >;
+                };
+                
+                adjust_layer {
 // -----------------------------------------------------------------------------------------
 // |            | F12            | PrntScr   | ctl {      | ctl home   | ctl }      | ENTER   |               |     |     |     |     |     |      |     |
 //              | ALTAB          | ctl-a     | home       | ctl end    | end        |  TAB    |               |     |     |     |     |     |      |
@@ -1173,14 +1182,6 @@
                  &tog_alt         &kp LC(A)   &kp HOME     &kp LC(END)  &kp END      &kp TAB                     &none &none &none &none &none &none
                  &kp LCTRL        &macro_UNDO &macro_CUT   &macro_COPY  &macro_PASTE &kp DEL                     &none &none &none &none &none &none
                                                                         &kp BSPC     &trans      &none     &none &none &none
-                        >;
-                };
-                adjust_layer {
-                        bindings = <
-   &none  &none  &none &none        &st_loopeach &st_elseend  &none                       &none  &none &none &none &none  &none &none
-          &none  &none &none        &st_forwhi   &st_ifthen   &none                       &none  &none &none &none &none  &none
-          &none  &none &none        &none        &none        &st_procfunc                &none  &none &none &none &none  &none
-                                                 &none        &trans       &none    &none &none  &none
                         >;
                 };
         };
