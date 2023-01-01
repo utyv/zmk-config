@@ -1112,28 +1112,28 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |         |  ; :          |   7      |   8   |    9    |   0     |               |     |     |     |     |     |      |     |
-//        |         |  .,           |  4 $     |   5   |   6 ^   |   +=    |               |     |     |     |     |     |      |
-//        | LCTL    |  /\           |   1      |   2   |   3 #   |   -_    |               |     |     |     |     |     |      |
+// |  ESC | /\      |  ; :          |   7      |   8   |    9    |   0     |               |     |     |     |     |     |      |     |
+//        | ALT     |  .,           |  4 $     |   5   |   6 ^   |   +=    |               |     |     |     |     |     |      |
+//        | LCTL    |               |   1      |   2   |   3 #   |   -_    |               |     |     |     |     |     |      |
 //                                                     |   SPC   |LSHFT    | RSE   | |     |     |     |
                         bindings = <
-   &kp ESC &none     &ru_semi_colon  &kp N7     &kp N8  &kp N9    &kp N0                    &none &none &none &none &none &none  &none
-           &mo ADJ   &kp SLASH       &ru_dollar &kp N5  &ru_caret &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL &ru_slash       &kp N1     &kp N2  &ru_hash  &kp MINUS                 &none &none &none &none &none &none
+   &kp ESC &ru_slash &ru_semi_colon  &kp N7     &kp N8  &kp N9    &kp N0                    &none &none &none &none &none &none  &none
+           &kp LALT  &kp SLASH       &ru_dollar &kp N5  &ru_caret &kp EQUAL                 &none &none &none &none &none &none
+           &kp LCTRL &mo ADJ         &kp N1     &kp N2  &ru_hash  &kp MINUS                 &none &none &none &none &none &none
                                                         &kp SPACE &kp LSHFT &mo RSE   &none &none &none
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |         |  ; :          |  7 ?     |   8    |    9    |   0     |               |     |     |     |     |     |      |     |
-//        |         |  .,           |   4      |   5    |    6    |   =+    |               |     |     |     |     |     |      |
-//        | LCTL    |  /\           |   1      |  2 "   |    3    |   -_    |               |     |     |     |     |     |      |
+// |  ESC | /\      |  ; :          |  7 ?     |   8    |    9    |   0     |               |     |     |     |     |     |      |     |
+//        | ALT     |  .,           |   4      |   5    |    6    |   =+    |               |     |     |     |     |     |      |
+//        | LCTL    |               |   1      |  2 "   |    3    |   -_    |               |     |     |     |     |     |      |
 //                                                      |   SPC   |LSHFT    | RSE   | |     |     |     |
                         bindings = <
-   &kp ESC &none     &kp SEMI        &eng_qmark &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
-           &mo ADJ   &eng_dot_comma  &kp N4     &kp N5   &kp N6    &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL &eng_slash      &kp N1     &eng_dqt &kp N3    &kp MINUS                 &none &none &none &none &none &none
-                                                         &kp SPACE &kp LSHFT &mo RSE   &none &none &none
+   &kp ESC &eng_slash &kp SEMI        &eng_qmark &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
+           &kp LALT   &eng_dot_comma  &kp N4     &kp N5   &kp N6    &kp EQUAL                 &none &none &none &none &none &none
+           &kp LCTRL  &mo ADJ         &kp N1     &eng_dqt &kp N3    &kp MINUS                 &none &none &none &none &none &none
+                                                          &kp SPACE &kp LSHFT &mo RSE   &none &none &none
                          >;
                 };
 
@@ -1153,9 +1153,9 @@
                 adjust_layer {
                         bindings = <
    &none  &none  &none &none        &st_loopeach &st_elseend  &none                       &none  &none &none &none &none  &none &none
-          &none  &none &none        &st_forwhi   &st_ifthen   &kp TAB                     &none  &none &none &none &none  &none
+          &none  &none &none        &st_forwhi   &st_ifthen   &none                       &none  &none &none &none &none  &none
           &none  &none &none        &none        &none        &st_procfunc                &none  &none &none &none &none  &none
-                                                 &none        &kp LSHFT    &kp LALT &none &none  &none
+                                                 &none        &trans       &kp LALT &none &none  &none
                         >;
                 };
         };
