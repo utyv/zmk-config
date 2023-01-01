@@ -315,6 +315,42 @@
                 , <&macro_tap &kp LS(R) &kp J &kp Y &kp T &kp W>
                 ;
         };
+        macro_FOR: macro_FOR {
+            label = "macro_FOR";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(L) &kp K &kp Z>
+                ;
+        };
+        macro_WHILE: macro_WHILE {
+            label = "macro_WHILE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(G) &kp J &kp R &kp F>
+                ;
+        };
+        macro_LOOP: macro_LOOP {
+            label = "macro_LOOP";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(W) &kp B &kp R &kp K>
+                ;
+        };
+        macro_EACH: macro_EACH {
+            label = "macro_EACH";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(R) &kp F &kp SEMI &kp L &kp J &kp U &kp J>
+                ;
+        };
    };
 };
 
@@ -486,6 +522,20 @@
             label = "ST_ELSEEND";
             #binding-cells = <0>;
             bindings = <&macro_ELSE>, <&macro_END>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        st_forwhi: st_forwhi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_FORWHI";
+            #binding-cells = <0>;
+            bindings = <&macro_FOR>, <&macro_WHILE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        st_loopeach: st_loopeach {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_LOOPEACH";
+            #binding-cells = <0>;
+            bindings = <&macro_FOR>, <&macro_WHILE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -1077,8 +1127,8 @@
                 };
                 adjust_layer {
                         bindings = <
-   &none  &none  &none &none        &none        &st_elseend  &none                    &none  &none &none &none &none  &none &none
-          &none  &none &none        &none        &st_ifthen   &kp TAB                  &none  &none &none &none &none  &none
+   &none  &none  &none &none        &st_loopeach &st_elseend  &none                    &none  &none &none &none &none  &none &none
+          &none  &none &none        &st_forwhi   &st_ifthen   &kp TAB                  &none  &none &none &none &none  &none
           &none  &none &none        &none        &none        &none                    &none  &none &none &none &none  &none
                                                  &none        &kp LSHFT &kp LALT &none &none  &none
                         >;
