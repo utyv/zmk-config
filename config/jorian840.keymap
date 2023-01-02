@@ -598,19 +598,20 @@
             bindings = <&macro_ALTP>, <&macro_ALTR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        st_ifthen: st_ifthen {
+        eng_copy: eng_copy {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_AT";
+            #binding-cells = <0>;
+            bindings = <&eng_dqt>, <&kp C>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       st_ifthen: st_ifthen {
             compatible = "zmk,behavior-mod-morph";
             label = "ST_IFTHEN";
             #binding-cells = <0>;
             bindings = <&macro_IF>, <&macro_THEN>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        eng_copy: eng_copy {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ENG_AT";
-            #binding-cells = <0>;
-            bindings = <&eng_dqt>, <&macro_COPY>;
-            mods = <(MOD_LCTL)>;
         };
         st_elseend: st_elseend {
             compatible = "zmk,behavior-mod-morph";
