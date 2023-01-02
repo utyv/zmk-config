@@ -1260,6 +1260,18 @@
             bindings = <&kp RIGHT>;
             layers = <ADJ>;
         };
+        combo_CLEFT {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <16 28>;
+            bindings = <&kp LC(LEFT)>;
+            layers = <ADJ>;
+        };
+        combo_CRIGHT {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <18 30>;
+            bindings = <&kp LC(RIGHT)>;
+            layers = <ADJ>;
+        };
         combo_UP {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <4 17>;
@@ -1270,6 +1282,12 @@
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <17 29>;
             bindings = <&kp DOWN>;
+            layers = <ADJ>;
+        };
+        combo_CENTER {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <6 19>;
+            bindings = <&kp LC(ENTER)>;
             layers = <ADJ>;
         };
     };
@@ -1300,7 +1318,7 @@
 //                                                      |  RSE    |LSHFT    | ADJ   | |     |     |     |
                         bindings = <
    &kp ESC &none      &kp SEMI        &eng_qmark &kp N8    &kp N9       &kp N0                    &none &none &none &none &none &none  &none
-           &kp SPACE  &eng_all        &eng_save  &kp N5    &kp eng_find &kp EQUAL                 &none &none &none &none &none &none
+           &kp SPACE  &eng_all        &eng_save  &kp N5    &eng_find    &kp EQUAL                 &none &none &none &none &none &none
            &kp LCTRL  &eng_undo       &ctl_cut   &eng_copy &eng_paste   &kp MINUS                 &none &none &none &none &none &none
                                                            &mo RSE      &kp LSHFT &mo ADJ   &none &none &none
                          >;
