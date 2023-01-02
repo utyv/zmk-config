@@ -593,7 +593,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "CTL_CUT";
             #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp Z>;
+            bindings = <&kp N1>, <&kp X>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
        };
