@@ -203,6 +203,15 @@
                 , <&macro_release &kp LALT>
                 ;
         };
+        macro_TMZ: macro_TMZ {
+            label = "macro_TMZ";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp N &kp M>
+                ;
+        };
         macro_ENG: macro_ENG {
             label = "macro_ENG";
             compatible = "zmk,behavior-macro";
@@ -1069,6 +1078,12 @@
             key-positions = <15 4>;
             bindings = <&kp SQT>;
             layers = <LWR>;
+        };
+        combo_TMZ {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <15 3>;
+            bindings = <&macro_TMZ>;
+            layers = <DEF>;
         };
         combo_LT {
             timeout-ms = <MY_COMBO_TIME>;
