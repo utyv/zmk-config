@@ -243,25 +243,7 @@
                 , <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
-        };
-        macro_ALTP: macro_ALTP {
-            label = "macro_ALTP";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 1>
-                , <&macro_press &kp LALT>
-                ;
-        };
-        macro_ALTR: macro_ALTR {
-            label = "macro_ALTR";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 1>
-                , <&macro_release &kp LALT>
-                ;
-        };
+       };
        macro_UNDO: macro_UNDO {
             label = "macro_UNDO";
             compatible = "zmk,behavior-macro";
@@ -591,18 +573,75 @@
             bindings = <&kp PSCRN>, <&kp LC(PAUSE_BREAK)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        tog_alt: tog_alt {
+        ru_undo: ru_undo {
             compatible = "zmk,behavior-mod-morph";
-            label = "TOG_ALT";
+            label = "RU_UNDO";
             #binding-cells = <0>;
-            bindings = <&macro_ALTP>, <&macro_ALTR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        eng_copy: eng_copy {
+            bindings = <&ru_slash>, <&kp Z>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_undo: eng_undo {
             compatible = "zmk,behavior-mod-morph";
-            label = "ENG_AT";
+            label = "ENG_UNDO";
+            #binding-cells = <0>;
+            bindings = <&eng_slash>, <&kp Z>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       ctl_cut: ctl_cut {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTL_CUT";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp Z>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       ru_copy: ru_copy {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_COPY";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp C>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_copy: eng_copy {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_COPY";
             #binding-cells = <0>;
             bindings = <&eng_dqt>, <&kp C>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       ru_paste: ru_paste {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_PASTE";
+            #binding-cells = <0>;
+            bindings = <&ru_hash>, <&kp V>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_paste: eng_paste {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_PASTE";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp V>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       ru_all: ru_all {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_ALL";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp A>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_all: eng_all {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_ALL";
+            #binding-cells = <0>;
+            bindings = <&eng_dot_comma>, <&kp A>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
        };
@@ -1215,10 +1254,10 @@
 //        | LCTL    |  /\           |   1      |   2   |   3 #   |   -_    |               |     |     |     |     |     |      |
 //                                                     |  RSE    |LSHFT    | ADJ   | |     |     |     |
                         bindings = <
-   &kp ESC &none     &ru_semi_colon  &kp N7     &kp N8  &kp N9    &kp N0                    &none &none &none &none &none &none  &none
-           &kp SPACE &kp SLASH       &ru_dollar &kp N5  &ru_caret &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL &ru_slash       &kp N1     &kp N2  &ru_hash  &kp MINUS                 &none &none &none &none &none &none
-                                                        &mo RSE   &kp LSHFT &mo ADJ   &none &none &none
+   &kp ESC &none     &ru_semi_colon  &kp N7     &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
+           &kp SPACE &ru_all         &ru_dollar &kp N5   &ru_caret &kp EQUAL                 &none &none &none &none &none &none
+           &kp LCTRL &ru_undo        &ru_cut    &ru_copy &ru_paste &kp MINUS                 &none &none &none &none &none &none
+                                                         &mo RSE   &kp LSHFT &mo ADJ   &none &none &none
                         >;
                 };
                 lower_layer {
@@ -1228,10 +1267,10 @@
 //        | LCTL    |  /\           |   1      |  2 "   |    3    |   -_    |               |     |     |     |     |     |      |
 //                                                      |  RSE    |LSHFT    | ADJ   | |     |     |     |
                         bindings = <
-   &kp ESC &none      &kp SEMI        &eng_qmark &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
-           &kp SPACE  &eng_dot_comma  &kp N4     &kp N5   &kp N6    &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL  &eng_slash      &kp N1     &eng_copy &kp N3   &kp MINUS                 &none &none &none &none &none &none
-                                                          &mo RSE   &kp LSHFT &mo ADJ   &none &none &none
+   &kp ESC &none      &kp SEMI        &eng_qmark &kp N8    &kp N9     &kp N0                    &none &none &none &none &none &none  &none
+           &kp SPACE  &eng_all        &kp N4     &kp N5    &kp N6     &kp EQUAL                 &none &none &none &none &none &none
+           &kp LCTRL  &eng_undo       &eng_cut   &eng_copy &eng_paste &kp MINUS                 &none &none &none &none &none &none
+                                                           &mo RSE    &kp LSHFT &mo ADJ   &none &none &none
                          >;
                 };
 
