@@ -1256,7 +1256,7 @@
                         bindings = <
    &kp ESC &none     &ru_semi_colon  &kp N7     &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
            &kp SPACE &ru_all         &ru_dollar &kp N5   &ru_caret &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL &ru_undo        &ru_cut    &ru_copy &ru_paste &kp MINUS                 &none &none &none &none &none &none
+           &kp LCTRL &ru_undo        &ctl_cut   &ru_copy &ru_paste &kp MINUS                 &none &none &none &none &none &none
                                                          &mo RSE   &kp LSHFT &mo ADJ   &none &none &none
                         >;
                 };
@@ -1269,7 +1269,7 @@
                         bindings = <
    &kp ESC &none      &kp SEMI        &eng_qmark &kp N8    &kp N9     &kp N0                    &none &none &none &none &none &none  &none
            &kp SPACE  &eng_all        &kp N4     &kp N5    &kp N6     &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL  &eng_undo       &eng_cut   &eng_copy &eng_paste &kp MINUS                 &none &none &none &none &none &none
+           &kp LCTRL  &eng_undo       &ctl_cut   &eng_copy &eng_paste &kp MINUS                 &none &none &none &none &none &none
                                                            &mo RSE    &kp LSHFT &mo ADJ   &none &none &none
                          >;
                 };
