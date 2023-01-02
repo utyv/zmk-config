@@ -645,6 +645,38 @@
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
        };
+       ru_save: ru_save {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_SAVE";
+            #binding-cells = <0>;
+            bindings = <&ru_dollar>, <&kp S>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_save: eng_save {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_SAVE";
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&kp S>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       ru_find: ru_find {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_FIND";
+            #binding-cells = <0>;
+            bindings = <&ru_caret>, <&kp F>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_find: eng_find {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_FIND";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp F>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
        st_ifthen: st_ifthen {
             compatible = "zmk,behavior-mod-morph";
             label = "ST_IFTHEN";
@@ -1255,7 +1287,7 @@
 //                                                     |  RSE    |LSHFT    | ADJ   | |     |     |     |
                         bindings = <
    &kp ESC &none     &ru_semi_colon  &kp N7     &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
-           &kp SPACE &ru_all         &ru_dollar &kp N5   &ru_caret &kp EQUAL                 &none &none &none &none &none &none
+           &kp SPACE &ru_all         &ru_save   &kp N5   &ru_find  &kp EQUAL                 &none &none &none &none &none &none
            &kp LCTRL &ru_undo        &ctl_cut   &ru_copy &ru_paste &kp MINUS                 &none &none &none &none &none &none
                                                          &mo RSE   &kp LSHFT &mo ADJ   &none &none &none
                         >;
@@ -1267,10 +1299,10 @@
 //        | LCTL    |  /\           |   1      |  2 "   |    3    |   -_    |               |     |     |     |     |     |      |
 //                                                      |  RSE    |LSHFT    | ADJ   | |     |     |     |
                         bindings = <
-   &kp ESC &none      &kp SEMI        &eng_qmark &kp N8    &kp N9     &kp N0                    &none &none &none &none &none &none  &none
-           &kp SPACE  &eng_all        &kp N4     &kp N5    &kp N6     &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL  &eng_undo       &ctl_cut   &eng_copy &eng_paste &kp MINUS                 &none &none &none &none &none &none
-                                                           &mo RSE    &kp LSHFT &mo ADJ   &none &none &none
+   &kp ESC &none      &kp SEMI        &eng_qmark &kp N8    &kp N9       &kp N0                    &none &none &none &none &none &none  &none
+           &kp SPACE  &eng_all        &eng_save  &kp N5    &kp eng_find &kp EQUAL                 &none &none &none &none &none &none
+           &kp LCTRL  &eng_undo       &ctl_cut   &eng_copy &eng_paste   &kp MINUS                 &none &none &none &none &none &none
+                                                           &mo RSE      &kp LSHFT &mo ADJ   &none &none &none
                          >;
                 };
 
