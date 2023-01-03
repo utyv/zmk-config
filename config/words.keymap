@@ -19,8 +19,8 @@
                 , <&macro_tap &kp LS(N) &kp J &kp U &kp L &kp F>
                 ;
         };
-    }
-}
+    };
+};
 / {
     behaviors {
         st_ifthen: st_ifthen {
@@ -30,8 +30,8 @@
             bindings = <&macro_IF>, <&macro_THEN>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    }
-}
+    };
+};
 / {
     macros {
         macro_END: macro_END {
@@ -52,8 +52,8 @@
                 , <&macro_tap &kp LS(B) &kp Y &kp F &kp X &kp T>
                 ;
         };
-    }
-}
+    };
+};
 / {
     behaviors {
         st_endelse: st_endelse {
@@ -63,8 +63,8 @@
             bindings = <&macro_END>, <&macro_ELSE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    }
-}
+    };
+};
 / {
     macros {
         macro_FOR: macro_FOR {
@@ -85,8 +85,8 @@
                 , <&macro_tap &kp LS(G) &kp J &kp R &kp F>
                 ;
         };
-    }
-}
+    };
+};
 / {
     behaviors {
         st_forwhile: st_forwhile {
@@ -96,8 +96,8 @@
             bindings = <&macro_FOR>, <&macro_WHILE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    }
-}
+    };
+};
 / {
     macros {
         macro_LOOP: macro_LOOP {
@@ -118,8 +118,8 @@
                 , <&macro_tap &kp LS(R) &kp F &kp SEMI &kp L &kp J &kp U &kp J>
                 ;
         };
-    }
-}
+    };
+};
 / {
     behaviors {
         st_loopeach: st_loopeach {
@@ -129,8 +129,8 @@
             bindings = <&macro_LOOP>, <&macro_EACH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    }
-}
+    };
+};
 / {
     macros {
         macro_ADD: macro_ADD {
@@ -151,8 +151,8 @@
                 , <&macro_tap &kp LS(E) &kp L &kp F &kp K &kp B &kp N &kp M>
                 ;
         };
-    }
-}
+    };
+};
 / {
     behaviors {
         st_adddel: st_adddel {
@@ -162,8 +162,8 @@
             bindings = <&macro_ADD>, <&macro_DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    }
-}
+    };
+};
 / {
     macros {
         macro_GET: macro_GET {
@@ -184,8 +184,8 @@
                 , <&macro_tap &kp LS(E) &kp C &kp N &kp F &kp Y &kp J &kp D &kp B &kp N &kp M>
                 ;
         };
-    }
-}
+    };
+};
 / {
     behaviors {
         st_getset: st_getset {
@@ -195,5 +195,5 @@
             bindings = <&macro_GET>, <&macro_SET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    }
-}
+    };
+};
