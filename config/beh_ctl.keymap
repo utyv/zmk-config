@@ -1,0 +1,116 @@
+/ {
+    behaviors {
+        ctl_prnbrk: ctl_prnbrk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTL_PRNBRK";
+            #binding-cells = <0>;
+            bindings = <&kp PSCRN>, <&kp LC(PAUSE_BREAK)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_undo: ru_undo {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_UNDO";
+            #binding-cells = <0>;
+            bindings = <&ru_slash>, <&kp Z>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_undo: eng_undo {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_UNDO";
+            #binding-cells = <0>;
+            bindings = <&eng_slash>, <&kp Z>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       ctl_cut: ctl_cut {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTL_CUT";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp X>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       ru_copy: ru_copy {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_COPY";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp C>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_copy: eng_copy {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_COPY";
+            #binding-cells = <0>;
+            bindings = <&eng_dqt>, <&kp C>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       ru_paste: ru_paste {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_PASTE";
+            #binding-cells = <0>;
+            bindings = <&ru_hash>, <&kp V>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_paste: eng_paste {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_PASTE";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp V>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       ru_all: ru_all {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_ALL";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp A>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_all: eng_all {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_ALL";
+            #binding-cells = <0>;
+            bindings = <&eng_dot_comma>, <&kp A>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       ru_save: ru_save {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_SAVE";
+            #binding-cells = <0>;
+            bindings = <&ru_dollar>, <&kp S>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_save: eng_save {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_SAVE";
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&kp S>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       ru_find: ru_find {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_FIND";
+            #binding-cells = <0>;
+            bindings = <&ru_caret>, <&kp F>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+       eng_find: eng_find {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_FIND";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp F>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+       };
+    };
+};
+       
