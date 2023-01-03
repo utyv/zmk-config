@@ -1,3 +1,4 @@
+
 / {
     macros {
         macro_IF: macro_IF {
@@ -5,7 +6,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 0>
+                = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(T) &kp C &kp K &kp B>
                 ;
         };
@@ -14,8 +15,32 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 0>
+                = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(N) &kp J &kp U &kp L &kp F>
+                ;
+        };
+    }
+}
+/ {
+    behaviors {
+        st_ifthen: st_ifthen {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_IFTHEN";
+            #binding-cells = <0>;
+            bindings = <&macro_IF>, <&macro_THEN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    }
+}
+/ {
+    macros {
+        macro_END: macro_END {
+            label = "macro_END";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(R) &kp J &kp Y &kp T &kp W>
                 ;
         };
         macro_ELSE: macro_ELSE {
@@ -23,25 +48,31 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 0>
+                = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(B) &kp Y &kp F &kp X &kp T>
                 ;
         };
-        macro_END: macro_END {
-            label = "macro_END";
-            compatible = "zmk,behavior-macro";
+    }
+}
+/ {
+    behaviors {
+        st_endelse: st_endelse {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_ENDELSE";
             #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 0>
-                , <&macro_tap &kp LS(R) &kp J &kp Y &kp T &kp W>
-                ;
+            bindings = <&macro_END>, <&macro_ELSE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+    }
+}
+/ {
+    macros {
         macro_FOR: macro_FOR {
             label = "macro_FOR";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 0>
+                = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(L) &kp K &kp Z>
                 ;
         };
@@ -50,16 +81,31 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 0>
+                = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(G) &kp J &kp R &kp F>
                 ;
         };
+    }
+}
+/ {
+    behaviors {
+        st_forwhile: st_forwhile {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_FORWHILE";
+            #binding-cells = <0>;
+            bindings = <&macro_FOR>, <&macro_WHILE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    }
+}
+/ {
+    macros {
         macro_LOOP: macro_LOOP {
             label = "macro_LOOP";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 0>
+                = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(W) &kp B &kp R &kp K>
                 ;
         };
@@ -68,34 +114,31 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 0>
+                = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(R) &kp F &kp SEMI &kp L &kp J &kp U &kp J>
                 ;
         };
-        macro_PROC: macro_PROC {
-            label = "macro_PROC";
-            compatible = "zmk,behavior-macro";
+    }
+}
+/ {
+    behaviors {
+        st_loopeach: st_loopeach {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_LOOPEACH";
             #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 0>
-                , <&macro_tap &kp LS(G) &kp H &kp J &kp W &kp T &kp L &kp E &kp H>
-                ;
+            bindings = <&macro_LOOP>, <&macro_EACH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        macro_FUNC: macro_FUNC {
-            label = "macro_FUNC";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 0>
-                , <&macro_tap &kp LS(A) &kp E &kp Y &kp R &kp W &kp B>
-                ;
-        };
+    }
+}
+/ {
+    macros {
         macro_ADD: macro_ADD {
             label = "macro_ADD";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 0>
+                = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(L) &kp J &kp COMMA &kp F &kp D &kp B &kp N &kp M>
                 ;
         };
@@ -104,16 +147,31 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 0>
+                = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(E) &kp L &kp F &kp K &kp B &kp N &kp M>
                 ;
         };
+    }
+}
+/ {
+    behaviors {
+        st_adddel: st_adddel {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_ADDDEL";
+            #binding-cells = <0>;
+            bindings = <&macro_ADD>, <&macro_DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    }
+}
+/ {
+    macros {
         macro_GET: macro_GET {
             label = "macro_GET";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 0>
+                = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(G) &kp J &kp K &kp E &kp X &kp B &kp N &kp M>
                 ;
         };
@@ -122,57 +180,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 0>
+                = <&macro_wait_time 1>
                 , <&macro_tap &kp LS(E) &kp C &kp N &kp F &kp Y &kp J &kp D &kp B &kp N &kp M>
                 ;
         };
-   };
-};
-
+    }
+}
 / {
     behaviors {
-       st_ifthen: st_ifthen {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_IFTHEN";
-            #binding-cells = <0>;
-            bindings = <&macro_IF>, <&macro_THEN>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        st_elseend: st_elseend {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_ELSEEND";
-            #binding-cells = <0>;
-            bindings = <&macro_END>, <&macro_ELSE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        st_forwhi: st_forwhi {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_FORWHI";
-            #binding-cells = <0>;
-            bindings = <&macro_FOR>, <&macro_WHILE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        st_loopeach: st_loopeach {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_LOOPEACH";
-            #binding-cells = <0>;
-            bindings = <&macro_LOOP>, <&macro_EACH>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        st_procfunc: st_procfunc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_PROCFUNC";
-            #binding-cells = <0>;
-            bindings = <&macro_PROC>, <&macro_FUNC>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        st_addel: st_addel {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_ADDEL";
-            #binding-cells = <0>;
-            bindings = <&macro_ADD>, <&macro_DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
         st_getset: st_getset {
             compatible = "zmk,behavior-mod-morph";
             label = "ST_GETSET";
@@ -180,5 +195,5 @@
             bindings = <&macro_GET>, <&macro_SET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    };
-};
+    }
+}
