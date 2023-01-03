@@ -1,0 +1,151 @@
+/ {
+    behaviors {
+        eng_dot_comma: eng_dot_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_DOT_COMMA";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COMMA>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        eng_dqt: eng_dqt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_DQT";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp LS(SQT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_hash: ru_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_HASH";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&macro_HASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_semi_colon: ru_semi_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_SEMI_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N4)>, <&kp LS(N6)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_slash: ru_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp LS(BSLH)>, <&kp BSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        eng_slash: eng_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp BSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_dollar: ru_dollar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_DOLLAR";
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&macro_DOLLAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_caret: ru_caret {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_CARET";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&macro_CARET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        eng_qmark: eng_qmark {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_QMARK";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp LS(SLASH)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_lt: ru_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_LT";
+            #binding-cells = <0>;
+            bindings = <&macro_LT>, <&macro_LT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_gt: ru_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_GT";
+            #binding-cells = <0>;
+            bindings = <&macro_GT>, <&macro_GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_lbkt: ru_lbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_LBKT";
+            #binding-cells = <0>;
+            bindings = <&macro_LBKT>, <&macro_LBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_rbkt: ru_rbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_RBKT";
+            #binding-cells = <0>;
+            bindings = <&macro_RBKT>, <&macro_RBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        eng_lbkt: eng_lbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_LBKT";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp LS(LBKT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        eng_rbkt: eng_rbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_RBKT";
+            #binding-cells = <0>;
+            bindings = <&kp RBKT>, <&kp LS(RBKT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_amps: ru_amps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_AMPS";
+            #binding-cells = <0>;
+            bindings = <&macro_AMPS>, <&macro_PIPE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        eng_amps: eng_amps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_AMPS";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N7)>, <&kp LS(NUBS)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_at: ru_at {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_AT";
+            #binding-cells = <0>;
+            bindings = <&macro_AT>, <&macro_SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        eng_at: eng_at {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENG_AT";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N2)>, <&kp SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_number: ru_number {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_NUMBER";
+            #binding-cells = <0>;
+            bindings = <&macro_NUMBER>, <&macro_PARAGRAF>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ru_grave: ru_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_GRAVE";
+            #binding-cells = <0>;
+            bindings = <&macro_GRAVE>, <&macro_TILDE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
