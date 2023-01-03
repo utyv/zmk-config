@@ -18,58 +18,12 @@
 #include "beh_symbols.keymap"
 #include "combo_symbols.keymap"
 #include "beh_ctl.keymap"
+#include "combo_ctl.keymap"
 #include "macro_lang.keymap"
 #include "combos_lang.keymap"
 #include "letters.keymap"
 #include "words.keymap"
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_LEFT {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <3 16>;
-            bindings = <&kp LEFT>;
-            layers = <ADJ>;
-        };
-        combo_RIGHT {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <5 18>;
-            bindings = <&kp RIGHT>;
-            layers = <ADJ>;
-        };
-        combo_CLEFT {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <16 28>;
-            bindings = <&kp LC(LEFT)>;
-            layers = <ADJ>;
-        };
-        combo_CRIGHT {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <18 30>;
-            bindings = <&kp LC(RIGHT)>;
-            layers = <ADJ>;
-        };
-        combo_UP {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <4 17>;
-            bindings = <&kp UP>;
-            layers = <ADJ>;
-        };
-        combo_DOWN {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <17 29>;
-            bindings = <&kp DOWN>;
-            layers = <ADJ>;
-        };
-        combo_CENTER {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <6 19>;
-            bindings = <&kp LC(ENTER)>;
-            layers = <ADJ>;
-        };
-    };
-};
 
 / {
         keymap {
