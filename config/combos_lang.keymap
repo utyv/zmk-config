@@ -1,0 +1,35 @@
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_RU_ENG {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <30 38>;
+            bindings = <&macro_ENG>;
+            layers = <DEF>;
+        };
+        combo_ENG_ENG {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <30 38>;
+            bindings = <&none>;
+            layers = <LWR>;
+        };
+        combo_ENG_RU {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <29 38>;
+            bindings = <&macro_RU>;
+            layers = <LWR>;
+        };
+        combo_RU_RU {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <29 38>;
+            bindings = <&none>;
+            layers = <DEF>;
+        };
+        combo_LANG {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <31 38>;
+            bindings = <&macro_LANG>;
+            layers = <DEF LWR>;
+        };
+    };
+};
