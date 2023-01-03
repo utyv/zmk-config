@@ -28,50 +28,6 @@
                 , <&macro_tap &kp N &kp M>
                 ;
        };
-       macro_UNDO: macro_UNDO {
-            label = "macro_UNDO";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 10>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap &kp Z>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        macro_CUT: macro_CUT {
-            label = "macro_CUT";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 10>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap &kp X>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        macro_COPY: macro_COPY {
-            label = "macro_COPY";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 10>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap &kp C>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        macro_PASTE: macro_PASTE {
-            label = "macro_PASTE";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 10>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap &kp V>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
         macro_IF: macro_IF {
             label = "macro_IF";
             compatible = "zmk,behavior-macro";
