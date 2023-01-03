@@ -18,96 +18,12 @@
 #include "beh_symbols.keymap"
 #include "beh_ctl.keymap"
 #include "macro_lang.keymap"
+#include "combos_lang.keymap"
 #include "words.keymap"
-
-
-/ {
-    behaviors {
-       st_ifthen: st_ifthen {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_IFTHEN";
-            #binding-cells = <0>;
-            bindings = <&macro_IF>, <&macro_THEN>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        st_elseend: st_elseend {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_ELSEEND";
-            #binding-cells = <0>;
-            bindings = <&macro_END>, <&macro_ELSE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        st_forwhi: st_forwhi {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_FORWHI";
-            #binding-cells = <0>;
-            bindings = <&macro_FOR>, <&macro_WHILE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        st_loopeach: st_loopeach {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_LOOPEACH";
-            #binding-cells = <0>;
-            bindings = <&macro_LOOP>, <&macro_EACH>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        st_procfunc: st_procfunc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_PROCFUNC";
-            #binding-cells = <0>;
-            bindings = <&macro_PROC>, <&macro_FUNC>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        st_addel: st_addel {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_ADDEL";
-            #binding-cells = <0>;
-            bindings = <&macro_ADD>, <&macro_DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        st_getset: st_getset {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ST_GETSET";
-            #binding-cells = <0>;
-            bindings = <&macro_GET>, <&macro_SET>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
-};
 
 / {
     combos {
         compatible = "zmk,combos";
-        combo_RU_ENG {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <30 38>;
-            bindings = <&macro_ENG>;
-            layers = <DEF>;
-        };
-        combo_ENG_ENG {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <30 38>;
-            bindings = <&none>;
-            layers = <LWR>;
-        };
-        combo_ENG_RU {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <29 38>;
-            bindings = <&macro_RU>;
-            layers = <LWR>;
-        };
-        combo_RU_RU {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <29 38>;
-            bindings = <&none>;
-            layers = <DEF>;
-        };
-        combo_LANG {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <31 38>;
-            bindings = <&macro_LANG>;
-            layers = <DEF LWR>;
-        };
         combo_A {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <17 18>;
