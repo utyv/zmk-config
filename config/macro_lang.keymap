@@ -1,0 +1,36 @@
+/ {
+    macros {
+        macro_ENG: macro_ENG {
+            label = "macro_ENG";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &to LWR>
+                ;
+        };
+        macro_RU: macro_RU {
+            label = "macro_RU";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_tap &to DEF>
+                ;
+        };
+        macro_LANG: macro_LANG {
+            label = "macro_LANG";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+       };
+   };
+};
