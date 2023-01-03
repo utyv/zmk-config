@@ -1,14 +1,5 @@
 / {
     macros {
-        macro_TMZ: macro_TMZ {
-            label = "macro_TMZ";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 1>
-                , <&macro_tap &kp N &kp M>
-                ;
-       };
         macro_IF: macro_IF {
             label = "macro_IF";
             compatible = "zmk,behavior-macro";
