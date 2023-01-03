@@ -16,6 +16,7 @@
 
 #include "macro_symbols.keymap"
 #include "beh_symbols.keymap"
+#include "beh_ctl.keymap"
 #include "macro_lang.keymap"
 #include "words.keymap"
 
