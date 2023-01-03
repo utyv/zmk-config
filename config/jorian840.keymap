@@ -25,12 +25,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_TMZ {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <15 3>;
-            bindings = <&macro_TMZ>;
-            layers = <DEF>;
-        };
         combo_LT {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <2 15>;
