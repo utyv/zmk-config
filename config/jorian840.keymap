@@ -66,11 +66,6 @@
                 };
                 
                 adjust_layer {
-// -----------------------------------------------------------------------------------------
-// |            | F12            | PrntScr   | ctl {      | ctl home   | ctl }      | ENTER   |               |     |     |     |     |     |      |     |
-//              | ALT            | ctl-a     | home       | ctl end    | end        |  TAB    |               |     |     |     |     |     |      |
-//              | LCTL           | ctl-z     | ctl-x      | ctl-c      | ctl-v      |  DEL    |               |     |     |     |     |     |      |
-//                                                                     | BKSPS      |LSHFT    |       | |     |     |     |
                         bindings = <
    &kp LC(MINUS) &kp F12          &ctl_prnbrk  &kp F3       &kp F4       &kp F5       &kp ENTER                   &none &none &none &none &none &none  &none
                  &kp LALT         &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &kp TAB                     &none &none &none &none &none &none
