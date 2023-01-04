@@ -12,6 +12,8 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
+#define CTL 4
+
 #define MY_COMBO_TIME 100
 
 #include "macro_symbols.keymap"
@@ -38,7 +40,7 @@
                         bindings = <
    &kp ESC &none     &ru_semi_colon  &kp N7     &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
            &kp SPACE &ru_all         &ru_save   &kp N5   &ru_find  &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL &ru_undo        &ctl_cut   &ru_copy &ru_paste &kp MINUS                 &none &none &none &none &none &none
+           &mo CTL   &ru_undo        &ctl_cut   &ru_copy &ru_paste &kp MINUS                 &none &none &none &none &none &none
                                                          &mo RSE   &kp LSHFT &mo ADJ   &none &none &none
                         >;
                 };
@@ -51,7 +53,7 @@
                         bindings = <
    &kp ESC &none      &kp SEMI        &eng_qmark &kp N8    &kp N9       &kp N0                    &none &none &none &none &none &none  &none
            &kp SPACE  &eng_all        &eng_save  &kp N5    &eng_find    &kp EQUAL                 &none &none &none &none &none &none
-           &kp LCTRL  &eng_undo       &ctl_cut   &eng_copy &eng_paste   &kp MINUS                 &none &none &none &none &none &none
+           &mo CTL    &eng_undo       &ctl_cut   &eng_copy &eng_paste   &kp MINUS                 &none &none &none &none &none &none
                                                            &mo RSE      &kp LSHFT &mo ADJ   &none &none &none
                          >;
                 };
@@ -71,6 +73,14 @@
                  &kp LALT         &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &kp TAB                     &none &none &none &none &none &none
                  &kp LCTRL        &kp LC(HOME) &kp LC(LBKT) &kp LC(RBKT) &kp LC(END)  &kp DEL                     &none &none &none &none &none &none
                                                                          &kp BSPC     &trans      &none     &none &none &none
+                        >;
+                };
+                control_layer {
+                        bindings = <
+   &none &kp none          &none  &none       &none       &none       &none                   &none &none &none &none &none &none  &none
+                 &none         &none     &none    &none    &none      &none                     &none &none &none &none &none &none
+                 &none        &macro_UNDO &macro_CUT &macro_COPY &macro_PASTE  &none                     &none &none &none &none &none &none
+                                                                         &none     &none      &none     &none &none &none
                         >;
                 };
         };
