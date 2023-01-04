@@ -6,7 +6,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 50>
+                = <&macro_wait_time 0>
                 , <&macro_tap &sk LSHFT &kp T &kp C &kp K &kp B>
                 ;
         };
