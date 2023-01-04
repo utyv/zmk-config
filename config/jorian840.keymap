@@ -78,10 +78,10 @@
                 };
                 control_layer {
                         bindings = <
-   &none &none          &none  &none       &none       &none       &none                   &none &none &none &none &none &none  &none
-                 &none         &none     &none    &none    &none      &none                     &none &none &none &none &none &none
-                 &none        &macro_UNDO &macro_CUT &macro_COPY &macro_PASTE  &none                     &none &none &none &none &none &none
-                                                                         &none     &none      &none     &none &none &none
+   &none &none &none       &none       &none       &none         &none                   &none &none &none &none &none &none  &none
+         &none &macro_ALL  &macro_SAVE &none       &macro_FIND   &none                     &none &none &none &none &none &none
+         &none &macro_UNDO &macro_CUT  &macro_COPY &macro_PASTE  &none                     &none &none &none &none &none &none
+                                                   &none         &none      &none     &none &none &none
                         >;
                 };
         };
