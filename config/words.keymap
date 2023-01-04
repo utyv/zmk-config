@@ -197,3 +197,168 @@
         };
     };
 };
+/ {
+    macros {
+        macro_LINE: macro_LINE {
+            label = "macro_LINE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(C) &kp N &kp H &kp J &kp R>
+                ;
+        };
+        macro_STR: macro_STR {
+            label = "macro_STR";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(C) &kp N &kp H>
+                ;
+        };
+    };
+};
+/ {
+    behaviors {
+        st_linestr: st_linestr {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_LINESTR";
+            #binding-cells = <0>;
+            bindings = <&macro_LINE>, <&macro_STR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
+/ {
+    macros {
+        macro_FIND: macro_FIND {
+            label = "macro_FIND";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(Y) &kp F &kp Q &kp N &kp B>
+                ;
+        };
+        macro_DATA: macro_DATA {
+            label = "macro_DATA";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(L) &kp F &kp Y &kp Y &kp S &kp T>
+                ;
+        };
+    };
+};
+/ {
+    behaviors {
+        st_finddata: st_finddata {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_FINDDATA";
+            #binding-cells = <0>;
+            bindings = <&macro_FIND>, <&macro_DATA>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
+/ {
+    macros {
+        macro_VALUE: macro_VALUE {
+            label = "macro_VALUE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(P) &kp Y &kp F &kp X &kp T &kp Y &kp B &kp T>
+                ;
+        };
+        macro_VAL: macro_VAL {
+            label = "macro_VAL";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(P) &kp Y &kp X>
+                ;
+        };
+    };
+};
+/ {
+    behaviors {
+        st_valueval: st_valueval {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_VALUEVAL";
+            #binding-cells = <0>;
+            bindings = <&macro_VALUE>, <&macro_VAL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
+/ {
+    macros {
+        macro_PARAM: macro_PARAM {
+            label = "macro_PARAM";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(G) &kp F &kp H &kp F &kp V &kp T &kp N &kp H>
+                ;
+        };
+        macro_PROP: macro_PROP {
+            label = "macro_PROP";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(C) &kp D &kp J &kp Q &kp C &kp N &kp D &kp J>
+                ;
+        };
+    };
+};
+/ {
+    behaviors {
+        st_paramprop: st_paramprop {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_PARAMPROP";
+            #binding-cells = <0>;
+            bindings = <&macro_PARAM>, <&macro_PROP>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
+/ {
+    macros {
+        macro_FILL: macro_FILL {
+            label = "macro_FILL";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(P) &kp F &kp G &kp J &kp K &kp Y &kp B &kp N &kp M>
+                ;
+        };
+        macro_CLEAR: macro_CLEAR {
+            label = "macro_CLEAR";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 1>
+                , <&macro_tap &kp LS(J) &kp X &kp B &kp C &kp N &kp B &kp N &kp M>
+                ;
+        };
+    };
+};
+/ {
+    behaviors {
+        st_fillclear: st_fillclear {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ST_FILLCLEAR";
+            #binding-cells = <0>;
+            bindings = <&macro_FILL>, <&macro_CLEAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
