@@ -25,6 +25,7 @@
 #include "combos_lang.keymap"
 #include "letters.keymap"
 #include "words.keymap"
+#include "macro_ctl.keymap"
 
 
 / {
