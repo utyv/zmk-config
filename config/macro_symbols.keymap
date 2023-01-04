@@ -5,10 +5,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 1>
-                , <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N3 &kp KP_N5>
-                , <&macro_release &kp LALT>
+                = <&macro_wait_time 0>
+                , <&macro_tap &sk LALT &kp LSHFT>
+                , <&macro_tap &sk LSHFT &kp N3>
+                , <&macro_tap &sk LALT &kp LSHFT>
                 ;
         };
         macro_DOLLAR: macro_DOLLAR {
