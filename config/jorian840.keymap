@@ -40,8 +40,8 @@
 //                                                     |  RSE    |LSHFT    | ADJ   | |     |     |     |
                         bindings = <
    &kp ESC &none     &ru_semi_colon  &kp N7     &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
-           &kp SPACE &ru_all         &ru_save   &kp N5   &ru_find  &kp EQUAL                 &none &none &none &none &none &none
-           &mo CTL   &ru_undo        &ctl_cut   &ru_copy &ru_paste &kp MINUS                 &none &none &none &none &none &none
+           &kp SPACE &kp DOT         &ru_dollar &kp N5   &ru_caret &kp EQUAL                 &none &none &none &none &none &none
+           &mo CTL   &ru_slash       &kp N1     &kp N2   &ru_hash  &kp MINUS                 &none &none &none &none &none &none
                                                          &mo RSE   &kp LSHFT &mo ADJ   &none &none &none
                         >;
                 };
@@ -53,8 +53,8 @@
 //                                                      |  RSE    |LSHFT    | ADJ   | |     |     |     |
                         bindings = <
    &kp ESC &none      &kp SEMI        &eng_qmark &kp N8    &kp N9       &kp N0                    &none &none &none &none &none &none  &none
-           &kp SPACE  &eng_all        &eng_save  &kp N5    &eng_find    &kp EQUAL                 &none &none &none &none &none &none
-           &mo CTL    &eng_undo       &ctl_cut   &eng_copy &eng_paste   &kp MINUS                 &none &none &none &none &none &none
+           &kp SPACE  &eng_dot_comma  &kp N4     &kp N5    &kp N6       &kp EQUAL                 &none &none &none &none &none &none
+           &mo CTL    &eng_slash      &kp N1     &eng_dqt  &kp N3       &kp MINUS                 &none &none &none &none &none &none
                                                            &mo RSE      &kp LSHFT &mo ADJ   &none &none &none
                          >;
                 };
