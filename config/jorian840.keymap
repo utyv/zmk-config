@@ -58,10 +58,10 @@
 
                 raise_layer {
                         bindings = <
-   &none  &none  &none &none        &st_loopeach &st_endelse  &none                       &none  &none &none &none &none  &none &none
-          &none  &none &none        &st_forwhile &st_ifthen   &none                       &none  &none &none &none &none  &none
-          &none  &none &none        &st_getset   &st_adddel   &none                &none  &none &none &none &none  &none
-                                                 &trans       &trans       &trans   &none &none  &none
+   &none  &none  &st_fillclear &st_finddata &st_loopeach &st_endelse  &none                       &none  &none &none &none &none  &none &none
+          &none  &st_paramprop &st_linestr  &st_forwhile &st_ifthen   &none                       &none  &none &none &none &none  &none
+          &none  &none         &st_valueval &st_getset   &st_adddel   &none                 &none &none &none &none &none  &none
+                                                         &trans       &trans       &trans   &none &none  &none
                         >;
                 };
                 
