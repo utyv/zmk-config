@@ -7,7 +7,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_wait_time 50>
-                , <&macro_tap &kp LS(T) &kp C &kp K &kp B>
+                , <&macro_tap &sk LSHFT &kp T &kp C &kp K &kp B>
                 ;
         };
         macro_THEN: macro_THEN {
