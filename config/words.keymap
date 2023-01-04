@@ -271,7 +271,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_wait_time 1>
-                , <&macro_tap &kp LS(P) &kp Y &kp F &kp X &kp T &kp Y &kp B &kp T>
+                , <&macro_tap &kp LS(P) &kp Y &kp F &kp X &kp T &kp Y &kp B>
                 ;
         };
         macro_VAL: macro_VAL {
@@ -313,7 +313,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_wait_time 1>
-                , <&macro_tap &kp LS(C) &kp D &kp J &kp Q &kp C &kp N &kp D &kp J>
+                , <&macro_tap &kp LS(C) &kp D &kp J &kp Q &kp C &kp N &kp D>
                 ;
         };
     };
