@@ -6,7 +6,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(T) &kp C &kp K &kp B>
                 ;
         };
@@ -15,7 +15,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(N) &kp J &kp U &kp L &kp F>
                 ;
         };
@@ -39,7 +39,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(R) &kp J &kp Y &kp T &kp W>
                 ;
         };
@@ -48,7 +48,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(B) &kp Y &kp F &kp X &kp T>
                 ;
         };
@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(L) &kp K &kp Z>
                 ;
         };
@@ -81,7 +81,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(G) &kp J &kp R &kp F>
                 ;
         };
@@ -105,7 +105,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(W) &kp B &kp R &kp K>
                 ;
         };
@@ -114,7 +114,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(R) &kp F &kp SEMI &kp L &kp J &kp U &kp J>
                 ;
         };
@@ -138,7 +138,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(L) &kp J &kp COMMA &kp F &kp D &kp B &kp N &kp M>
                 ;
         };
@@ -147,7 +147,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(E) &kp L &kp F &kp K &kp B &kp N &kp M>
                 ;
         };
@@ -171,7 +171,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(G) &kp J &kp K &kp E &kp X &kp B &kp N &kp M>
                 ;
         };
@@ -180,7 +180,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(E) &kp C &kp N &kp F &kp Y &kp J &kp D &kp B &kp N &kp M>
                 ;
         };
@@ -204,7 +204,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(C) &kp N &kp H &kp J &kp R>
                 ;
         };
@@ -213,7 +213,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(C) &kp N &kp H>
                 ;
         };
@@ -237,7 +237,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(Y) &kp F &kp Q &kp N &kp B>
                 ;
         };
@@ -246,7 +246,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(L) &kp F &kp Y &kp Y &kp S &kp T>
                 ;
         };
@@ -270,7 +270,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(P) &kp Y &kp F &kp X &kp T &kp Y &kp B>
                 ;
         };
@@ -279,7 +279,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(P) &kp Y &kp X>
                 ;
         };
@@ -303,7 +303,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(G) &kp F &kp H &kp F &kp V &kp T &kp N &kp H>
                 ;
         };
@@ -312,7 +312,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(C) &kp D &kp J &kp Q &kp C &kp N &kp D>
                 ;
         };
@@ -336,7 +336,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(P) &kp F &kp G &kp J &kp K &kp Y &kp B &kp N &kp M>
                 ;
         };
@@ -345,7 +345,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(J) &kp X &kp B &kp C &kp N &kp B &kp N &kp M>
                 ;
         };
@@ -369,7 +369,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(Y) &kp J &kp D &kp S &kp Q>
                 ;
         };
@@ -378,7 +378,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(Y) &kp T &kp J &kp G &kp H &kp T &kp L &kp T &kp K &kp T &kp Y &kp J>
                 ;
         };
@@ -402,7 +402,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(P) &kp F &kp G &kp H &kp J &kp C>
                 ;
         };
@@ -411,7 +411,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(D) &kp S &kp G &kp J &kp K &kp Y &kp B &kp N &kp M>
                 ;
         };
@@ -435,7 +435,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(D) &kp C &kp N &kp F &kp D &kp B &kp N &kp M>
                 ;
         };
@@ -444,7 +444,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(D) &kp S &kp COMMA &kp H &kp F &kp N &kp M>
                 ;
         };
@@ -468,7 +468,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(D) &kp S &kp COMMA &kp J &kp H &kp R &kp F>
                 ;
         };
@@ -477,7 +477,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(C) &kp K &kp T &kp L &kp E &kp DOT &kp O &kp B &kp Q>
                 ;
         };
@@ -501,7 +501,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(V) &kp F &kp C &kp C &kp B &kp D>
                 ;
         };
@@ -510,7 +510,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(C) &kp J &kp J &kp N &kp D &kp T &kp N &kp C &kp N &kp D &kp B &kp T>
                 ;
         };
@@ -534,7 +534,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(C) &kp N &kp H &kp E &kp R &kp N &kp E &kp H &kp F>
                 ;
         };
@@ -543,7 +543,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(C) &kp G &kp B &kp C &kp J &kp R>
                 ;
         };
@@ -567,7 +567,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(R) &kp J &kp K &kp J &kp Y &kp R>
                 ;
         };
@@ -576,7 +576,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_wait_time 10>
+                = <&macro_wait_time 50>
                 , <&macro_tap &kp LS(L) &kp T &kp H &kp T &kp D &kp J>
                 ;
         };
