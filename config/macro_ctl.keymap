@@ -67,7 +67,7 @@
                 ;
         };
         macro_FIND: macro_FIND {
-            label = "macro_save";
+            label = "macro_find";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
