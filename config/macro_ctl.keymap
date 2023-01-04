@@ -1,4 +1,3 @@
-// not used
 / {
     macros {
        macro_UNDO: macro_UNDO {
@@ -42,6 +41,39 @@
                 = <&macro_wait_time 10>
                 , <&macro_press &kp LCTRL>
                 , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        macro_ALL: macro_ALL {
+            label = "macro_all";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 10>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        macro_SAVE: macro_SAVE {
+            label = "macro_save";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 10>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        macro_FIND: macro_FIND {
+            label = "macro_save";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 10>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>
                 , <&macro_release &kp LCTRL>
                 ;
         };
