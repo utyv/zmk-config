@@ -1,89 +1,41 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_LT {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <2 15>;
-            bindings = <&ru_lt>;
-            layers = <DEF>;
-        };
-        combo_ENG_LT {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <2 15>;
-            bindings = <&kp LS(COMMA)>;
-            layers = <LWR>;
-        };
-        combo_GT {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <3 16>;
-            bindings = <&ru_gt>;
-            layers = <DEF>;
-        };
-        combo_ENG_GT {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <3 16>;
-            bindings = <&kp LS(DOT)>;
-            layers = <LWR>;
-        };
-        combo_LBKT {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <5 18>;
-            bindings = <&ru_lbkt>;
-            layers = <DEF>;
-        };
         combo_ENG_LBKT {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <5 18>;
-            bindings = <&eng_lbkt>;
+            bindings = <&kp LBKT>;
             layers = <LWR>;
-        };
-        combo_RBKT {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <6 19>;
-            bindings = <&ru_rbkt>;
-            layers = <DEF>;
         };
         combo_ENG_RBKT {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <6 19>;
-            bindings = <&eng_rbkt>;
+            bindings = <&kp RBKT>;
             layers = <LWR>;
         };
-        combo_AMPS {
+        combo_ENG_SEMI {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <4 17>;
-            bindings = <&ru_amps>;
-            layers = <DEF>;
-        };
-        combo_ENG_AMPS {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <4 17>;
-            bindings = <&eng_amps>;
+            key-positions = <2 15>;
+            bindings = <&kp SEMI>;
             layers = <LWR>;
         };
-        combo_AT {
+        combo_ENG_SQT {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <17 29>;
-            bindings = <&ru_at>;
-            layers = <DEF>;
-        };
-        combo_ENG_AT {
-            timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <17 29>;
-            bindings = <&eng_at>;
+            bindings = <&kp SQT>;
             layers = <LWR>;
         };
-        combo_NUMBER {
+        combo_ENG_NUBS {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <18 30>;
-            bindings = <&ru_number>;
-            layers = <DEF LWR>;
+            key-positions = <15 27>;
+            bindings = <&kp NUBS>;
+            layers = <LWR>;
         };
-        combo_GRAVE {
+        combo_ENG_GRAVE {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <16 28>;
-            bindings = <&ru_grave>;
-            layers = <DEF LWR>;
+            key-positions = <4 17>;
+            bindings = <&kp GRAVE>;
+            layers = <LWR>;
         };
     };
 };
