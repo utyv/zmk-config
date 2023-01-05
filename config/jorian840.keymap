@@ -16,15 +16,15 @@
 
 #define MY_COMBO_TIME 100
 
-#include "macro_symbols.keymap"
-#include "beh_symbols.keymap"
+//#include "macro_symbols.keymap"
+//#include "beh_symbols.keymap"
 #include "combo_symbols.keymap"
-#include "beh_ctl.keymap"
+//#include "beh_ctl.keymap"
 #include "combo_ctl.keymap"
 #include "macro_lang.keymap"
 #include "combos_lang.keymap"
 #include "letters.keymap"
-#include "words.keymap"
+//#include "words.keymap"
 #include "macro_ctl.keymap"
 
 
@@ -34,43 +34,43 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |         |  ; :          |   7      |   8   |    9    |   0     |               |     |     |     |     |     |      |     |
-//        | SPC     |  .,           |  4 $     |   5   |   6 ^   |   +=    |               |     |     |     |     |     |      |
-//        | LCTL    |  /\           |   1      |   2   |   3 #   |   -_    |               |     |     |     |     |     |      |
+// |  ESC |         |               |   7      |   8   |    9    |   0     |               |     |     |     |     |     |      |     |
+//        | SPC     |  .,           |   4      |   5   |    6    |   +=    |               |     |     |     |     |     |      |
+//        | LCTL    |  \/           |   1      |   2   |    3    |   -_    |               |     |     |     |     |     |      |
 //                                                     |  RSE    |LSHFT    | ADJ   | |     |     |     |
                         bindings = <
-   &kp ESC &none     &ru_semi_colon  &kp N7     &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
-           &kp SPACE &kp DOT         &ru_dollar &kp N5   &ru_caret &kp EQUAL                 &none &none &none &none &none &none
-           &mo CTL   &ru_slash       &kp N1     &kp N2   &ru_hash  &kp MINUS                 &none &none &none &none &none &none
-                                                         &mo RSE   &kp LSHFT &mo ADJ   &none &none &none
+   &kp ESC &sk LSHFT &none           &kp N7     &kp N8   &kp N9    &kp N0                    &none &none &none &none &none &none  &none
+           &kp SPACE &kp DOT         &kp N4     &kp N5   &kp N6    &kp EQUAL                 &none &none &none &none &none &none
+           &mo CTL   &kp NUBS        &kp N1     &kp N2   &kp N3    &kp MINUS                 &none &none &none &none &none &none
+                                                         &mo SPACE &kp LSHFT &mo ADJ   &none &none &none
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |         |  ; :          |  7 ?     |   8    |    9    |   0     |               |     |     |     |     |     |      |     |
-//        | SPC     |  .,           |   4      |   5    |    6    |   =+    |               |     |     |     |     |     |      |
-//        | LCTL    |  /\           |   1      |  2 "   |    3    |   -_    |               |     |     |     |     |     |      |
+// |  ESC |         |  ,            |   7      |   8    |    9    |   0     |               |     |     |     |     |     |      |     |
+//        | SPC     |  .            |   4      |   5    |    6    |   =+    |               |     |     |     |     |     |      |
+//        | LCTL    |  /            |   1      |   2    |    3    |   -_    |               |     |     |     |     |     |      |
 //                                                      |  RSE    |LSHFT    | ADJ   | |     |     |     |
                         bindings = <
-   &kp ESC &none      &kp SEMI        &eng_qmark &kp N8    &kp N9       &kp N0                    &none &none &none &none &none &none  &none
-           &kp SPACE  &eng_dot_comma  &kp N4     &kp N5    &kp N6       &kp EQUAL                 &none &none &none &none &none &none
-           &mo CTL    &eng_slash      &kp N1     &eng_dqt  &kp N3       &kp MINUS                 &none &none &none &none &none &none
-                                                           &mo RSE      &kp LSHFT &mo ADJ   &none &none &none
+   &kp ESC &sk LSHFT  &kp COMMA       &kp N7     &kp N8    &kp N9       &kp N0                    &none &none &none &none &none &none  &none
+           &kp SPACE  &kp DOT         &kp N4     &kp N5    &kp N6       &kp EQUAL                 &none &none &none &none &none &none
+           &mo CTL    &kp SLASH       &kp N1     &kp N2    &kp N3       &kp MINUS                 &none &none &none &none &none &none
+                                                           &mo SPACE    &kp LSHFT &mo ADJ   &none &none &none
                          >;
                 };
 
                 raise_layer {
                         bindings = <
-   &none  &st_struclist &st_fillclear &st_finddata &st_loopeach &st_endelse  &st_inssel                  &none  &none &none &none &none  &none &none
-          &st_arraymap  &st_paramprop &st_linestr  &st_forwhile &st_ifthen   &st_qweryexec               &none  &none &none &none &none  &none
-          &st_coltree   &st_newundef  &st_valueval &st_getset   &st_adddel   &st_fetchnext               &none &none &none &none &none  &none
+   &none  &none &none &none &none &none  &none                  &none  &none &none &none &none  &none &none
+          &none  &none &none  &none &none   &none               &none  &none &none &none &none  &none
+          &none   &none  &none &none   &none   &none               &none &none &none &none &none  &none
                                                                 &trans       &trans       &trans   &none &none  &none
                         >;
                 };
                 
                 adjust_layer {
                         bindings = <
-   &kp LC(MINUS) &kp F12          &ctl_prnbrk  &kp F3       &kp F4       &kp F5       &kp ENTER                   &none &none &none &none &none &none  &none
+   &kp LC(MINUS) &kp F12          &kp PSCRN    &kp F3       &kp F4       &kp F5       &kp ENTER                   &none &none &none &none &none &none  &none
                  &kp LALT         &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &kp TAB                     &none &none &none &none &none &none
                  &kp LCTRL        &kp LC(HOME) &kp LC(LBKT) &kp LC(RBKT) &kp LC(END)  &kp DEL                     &none &none &none &none &none &none
                                                                          &kp BSPC     &trans      &none     &none &none &none
