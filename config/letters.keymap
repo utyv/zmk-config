@@ -4,7 +4,7 @@
         cb_RU_V {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <2 5>;
-            bindings = <&kp d>;
+            bindings = <&kp D>;
             layers = <DEF>;
         };
     };
