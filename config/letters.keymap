@@ -11,8 +11,8 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        m_RU_R: m_RU_R {
-            label = "m_RU_R";
+        m_ru_R: m_ru_R {
+            label = "m_ru_R";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
