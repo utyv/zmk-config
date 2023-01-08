@@ -136,7 +136,7 @@
         cb_RU_F {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <4 18>;
-            bindings = <&kp A;
+            bindings = <&kp A>;
             layers = <DEF>;
         };
         cb_RU_TVZ {
