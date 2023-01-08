@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEF 0
+#define NAV 1
 
 #define MY_COMBO_TIME 100
 
@@ -23,7 +24,15 @@
         &none &none     &kp B &kp F &kp T &kp J &none     &none         &none  &none &none &none &none &none
               &kp SPACE &kp H &kp C &kp N &kp Y &none     &none         &none  &none &none &none &none
               &none     &none &none &none &none &none     &none         &none  &none &none &none &none
-                                          &none &kp LSHFT &none         &none  &none &none
+                                          &none &kp LSHFT &mo NAV       &none  &none &none
+                        >;
+                };
+                nav_layer {
+                        bindings = <
+   &kp LC(MINUS) &kp F12          &kp PSCRN    &kp F3       &kp F4       &kp F5       &kp ENTER                   &none &none &none &none &none &none  &none
+                 &kp LALT         &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &kp TAB                     &none &none &none &none &none &none
+                 &kp LCTRL        &kp LC(HOME) &kp LC(LBKT) &kp LC(RBKT) &kp LC(END)  &kp DEL                     &none &none &none &none &none &none
+                                                                         &kp BSPC     &trans      &none     &none &none &none
                         >;
                 };
         };
