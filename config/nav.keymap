@@ -3,7 +3,7 @@
         compatible = "zmk,combos";
         combo_LEFT {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <3 16>;
+            key-positions = <2 15>;
             bindings = <&kp LEFT>;
             layers = <NAV>;
         };
@@ -15,7 +15,7 @@
         };
         combo_CLEFT {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <16 28>;
+            key-positions = <15 27>;
             bindings = <&kp LC(LEFT)>;
             layers = <NAV>;
         };
@@ -33,7 +33,7 @@
         };
         combo_DOWN {
             timeout-ms = <MY_COMBO_TIME>;
-            key-positions = <17 29>;
+            key-positions = <3 16>;
             bindings = <&kp DOWN>;
             layers = <NAV>;
         };
