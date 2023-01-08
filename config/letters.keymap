@@ -82,9 +82,74 @@
         cb_RU_CH {
             timeout-ms = <MY_COMBO_TIME>;
             key-positions = <15 5>;
-            bindings = <&kp G>;
+            bindings = <&kp X>;
             layers = <DEF>;
         };
-        
+        cb_RU_J {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <2 17>;
+            bindings = <&kp Q>;
+            layers = <DEF>;
+        };
+        cb_RU_H {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <16 5>;
+            bindings = <&kp LBKT>;
+            layers = <DEF>;
+        };
+        cb_RU_ZH {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <4 15>;
+            bindings = <&kp SEMI>;
+            layers = <DEF>;
+        };
+        cb_RU_SH {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <3 18>;
+            bindings = <&kp I>;
+            layers = <DEF>;
+        };
+        cb_RU_YU {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <2 16>;
+            bindings = <&kp DOT>;
+            layers = <DEF>;
+        };
+        cb_RU_C {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <5 17>;
+            bindings = <&kp W>;
+            layers = <DEF>;
+        };
+        cb_RU_SCH {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <3 17>;
+            bindings = <&kp O>;
+            layers = <DEF>;
+        };
+        cb_RU_EE {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <4 16>;
+            bindings = <&kp SQT>;
+            layers = <DEF>;
+        };
+        cb_RU_F {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <4 18>;
+            bindings = <&kp F>;
+            layers = <DEF>;
+        };
+        cb_RU_TVZ {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <3 15>;
+            bindings = <&kp RBKT>;
+            layers = <DEF>;
+        };
+        cb_RU_YO {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <3 4 15>;
+            bindings = <&kp GRAVE>;
+            layers = <DEF>;
+        };
     };
 };
