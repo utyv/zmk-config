@@ -31,5 +31,60 @@
             bindings = <&kp L>;
             layers = <DEF>;
         };
+        cb_RU_P {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <4 5>;
+            bindings = <&kp G>;
+            layers = <DEF>;
+        };
+        cb_RU_U {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <16 17>;
+            bindings = <&kp E>;
+            layers = <DEF>;
+        };
+        cb_RU_YA {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <3 4>;
+            bindings = <&kp Z>;
+            layers = <DEF>;
+        };
+        cb_RU_Y {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <15 17>;
+            bindings = <&kp S>;
+            layers = <DEF>;
+        };
+        cb_RU_MZ {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <16 18>;
+            bindings = <&kp M>;
+            layers = <DEF>;
+        };
+        cb_RU_G {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <2 4>;
+            bindings = <&kp U>;
+            layers = <DEF>;
+        };
+        cb_RU_Z {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <3 5>;
+            bindings = <&kp G>;
+            layers = <DEF>;
+        };
+        cb_RU_B {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <2 18>;
+            bindings = <&kp COMMA>;
+            layers = <DEF>;
+        };
+        cb_RU_CH {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <15 5>;
+            bindings = <&kp G>;
+            layers = <DEF>;
+        };
+        
     };
 };
