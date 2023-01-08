@@ -1,1 +1,11 @@
-
+/ {
+    combos {
+        compatible = "zmk,combos";
+        cb_RU_V {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <2 5>;
+            bindings = <&kp d>;
+            layers = <DEF>;
+        };
+    };
+};
