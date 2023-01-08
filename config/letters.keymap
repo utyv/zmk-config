@@ -7,5 +7,29 @@
             bindings = <&kp D>;
             layers = <DEF>;
         };
+        cb_RU_L {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <15 18>;
+            bindings = <&kp K>;
+            layers = <DEF>;
+        };
+        cb_RU_K {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <15 16>;
+            bindings = <&kp R>;
+            layers = <DEF>;
+        };
+        cb_RU_M {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <17 18>;
+            bindings = <&kp V>;
+            layers = <DEF>;
+        };
+        cb_RU_D {
+            timeout-ms = <MY_COMBO_TIME>;
+            key-positions = <2 3>;
+            bindings = <&kp L>;
+            layers = <DEF>;
+        };
     };
 };
