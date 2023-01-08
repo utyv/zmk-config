@@ -14,6 +14,8 @@
 #define MY_COMBO_TIME 100
 
 #include "letters.keymap"
+#include "nav.keymap"
+
 
 / {
         keymap {
