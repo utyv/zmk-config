@@ -1,7 +1,7 @@
 / {
     macros {
-        m_ru_r: m_ru_r {
-            label = "m_ru_r";
+        lwrl_ru_r: lwrl_ru_r {
+            label = "lwrl_ru_r";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -11,7 +11,7 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        m_ru_R: m_ru_R {
+        capl_ru_r: capl_ru_r {
             label = "m_ru_R";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -31,7 +31,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "ru_r";
             #binding-cells = <0>;
-            bindings = <&m_ru_r>, <&m_ru_R>;
+            bindings = <&lwrl_ru_r>, <&capl_ru_l>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
