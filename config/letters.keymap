@@ -31,7 +31,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "ru_r";
             #binding-cells = <0>;
-            bindings = <&m_ru_r>, <&kp m_ru_R>;
+            bindings = <&m_ru_r>, <&m_ru_R>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
