@@ -1,0 +1,38 @@
+/ {
+    macros {
+        m_ru_r: m_ru_r {
+            label = "m_ru_r";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 0>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N0>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        m_RU_R: m_RU_R {
+            label = "m_RU_R";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 0>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N8>
+                , <&macro_release &kp LALT>
+                ;
+        };
+   };
+};
+
+/ {
+    behaviors {
+        ru_r: ru_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ru_r";
+            #binding-cells = <0>;
+            bindings = <&m_ru_r>, <&kp m_ru_R>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};   
