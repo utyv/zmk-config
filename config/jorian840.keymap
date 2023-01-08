@@ -8,16 +8,20 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DEF 0
+#define _RU 0
+
+#define MY_COMBO_TIME 100
+
+#include "letters.keymap"
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
+                ru_layer {
                         bindings = <
         &none &none &none &none &none &none &none &none         &none  &none &none &none &none &none
-              &none &none &none &none &none &none &none         &none  &none &none &none &none
+              &none &ru_r &none &none &none &none &none         &none  &none &none &none &none
               &none &none &none &none &none &none &none         &none  &none &none &none &none
                                       &none &none &none         &none  &none &none
                         >;
